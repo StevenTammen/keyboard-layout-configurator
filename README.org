@@ -1,0 +1,82 @@
+[[https://waffle.io/StevenTammen/keyboard-fu][https://badge.waffle.io/StevenTammen/keyboard-fu.svg?columns=all]]
+
+*  UGAHacks 4 Goals
+
+Check the Waffle.io Kanban board for the most up-to-date snapshot of tasks. Here is a list of general goals:
+
+** Build a JSON parser for KBLE to parse GUI-configured keyboard layouts
+
+[[http://www.keyboard-layout-editor.com/]] is a web application that allows for creating keyboard layouts. The interface is simple, but powerful.
+
+KBLE layouts can be downloaded as JSON, to store them and then upload them later to pull the layouts back up. However, there is no reason why this JSON could not be used to drive automatic creation on keyboard remapping scripts.
+
+AutoHotkey is a powerful Windows scripting language that allows for [[https://github.com/StevenTammen/personal-keyboard-config][complex keyboard remapping]]. The big problem with "just" using AutoHotkey is that moving things around on keyboard layers becomes tedious, especially once things get complicated. Moreover, coding up custom remapping scripts is great and all for the computer scientists among us, but it leaves many people that might want to have custom keyboard layouts without any easy-to-use GUI options.
+
+Setting up a code-generator driven by KBLE JSON should not be too difficult to implement. Python will probably used for maintainability and since speed is not a huge concern for this project. (The code-generator will only run when a user changes their layout).
+
+** Support multiple physical keyboard layouts
+
+Out of the box, if this project supported the basic ANSI-104 layout and the Kinesis Advantage layout, I would be satisfied. The JSON will be slightly different for each key configuration on KBLE, requiring some modification of the parsing code.
+
+In the long term, it would probably be worth supporting the ErgoDox layout, and drafting documentation explaining how to modify parsing code for custom KBLE presets.
+
+** Support a simple configuration file (settings.ini)
+
+Software should be easy for users to customize. Menus hide information, and you can't search on them. Therefore, configuration files are better in most cases. (In my somewhat biased opinion).
+
+Python [[https://docs.python.org/3/library/configparser.html][can deal with config files easily]]. AutoHotkey can as well with [[https://www.autohotkey.com/docs/commands/IniRead.htm][IniRead]] and [[https://www.autohotkey.com/docs/commands/IniWrite.htm][IniWrite]].
+
+** Support keyboard layers
+
+Certain firmware keyboard layout implementations (e.g., [[https://configure.ergodox-ez.com/layouts/default/latest/0][the Ergodox EZ firmware]]) allow for multiple layers. Having used Number and Shift keyboard layers myself for quite some time, keyboard layers are something that you really can't live without once you've tried them.
+
+It is easy enough to define multiple layers on KBLE by copying a layout into another browser tab, and then customizing it. The trick will be saving the JSON into consistently-named layer files, such that the code-generator implementation can link them all together.
+
+Out of the box, it would be good if the code-generator supported the following layers ([[https://www.steventammen.com/pages/keyboard-braindump/#the-structure-of-one-particular-language-s-keypress-logic][in order of priority]]):
+
+- Function (the layer active after the Func leader key, or when the Func key is held down)
+- Number (the layer active after the Num leader key, or when the Num key is held down)
+- Shift (the layer active after the Shift leader key or when the Shift key is held down)
+- Expand 1 (the layer active after the Expd1 leader key, or when the Expd1 key is held down)
+- Expand 2 (the layer active after the Expd2 leader key, or when the Expd2 key is held down)
+- Language (the layer active after the Lang leader key)
+- Base (the layer active by default)
+
+I term behavior achieved after tapping a key "leader key behavior" and behavior achieved when holding a key down "modifier key behavior." Leader key/modifier key behavior can be achieved using the [[https://github.com/lydell/dual][Dual AutoHotkey library]]. I have layers working in my own keyboard config, and the general use looks like, e.g.
+
+#+BEGIN_SRC autohotkey
+
+; Make Dual object
+dual := new Dual
+
+; Define virtual keys (VKs) to use with Dual
+global shiftLeader := "VK16"
+global shiftModifier := "VK1A"
+
+; Define leader/modifier behavior for Right Shift
+*RShift::
+	dual.combine(shiftModifier, shiftLeaderDn)
+	shiftDownNoUp := true
+	return
+*RShift Up::
+	dual.combine(shiftModifier, shiftLeaderDn)
+	shiftDownNoUp := false
+	return
+
+#+END_SRC
+
+The ~shiftDownNoUp~ flag is necessary since the the AutoHotkey function ~GetKeyState()~ acts inconsistently if you just use VK states via Dual (presumably due to internal delay in key buffers and whatnot). This is an upstream issue.
+
+There a few more gotchas implementing layers, but I've done it before so can handle that bit of the project. We'll need to translate different KBLE JSON files into different layers, and that's where the code-generator will come in.
+
+** Support intelligent modifiers
+
+Most people use modifiers with, well, modifier key behavior. However, modifier keys can be used with leader key behavior as well, and in fact it usually ends up being faster and less RSI-inducing.
+
+This is another thing I've already implemented in my personal keyboard config, and should be able to port over relatively easily.
+
+** Automate KBLE -> local JSON files
+
+At the beginning, it makes the most sense to hand-download the JSON, and design a JSON parser and code-generator based upon local JSON files. However, it would be nice to eventually automate the downloading process, so that users can bookmark a set of permalinked KBLE pages (representing all the layers in their layout), and then download the JSON for all their layers in bulk. (Changing something on one layer probably entails changing things on other layers as well).
+
+The ideal would be to have a function that traversed all the KBLE links in a particular bookmarks folder (user-configurable), saving the JSON for each in files with appropriate names (names of the layers, as defined by the names of the bookmarks). This might be possible with, e.g., [[https://developer.chrome.com/extensions/bookmarks]].
