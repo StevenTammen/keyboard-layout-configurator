@@ -1,15 +1,24 @@
 import json
+from mako.template import Template
+
 
 def create_mapping(keymap):
-	remap = open("remap.ahk", "w")
+	remap = open("layout/remap.ahk", "w")
+	keymap = [{"key": "a", "base": "x", "shift": "X", "num": "5"}, {"key": "s", "base": "z", "shift": "Z", "num": "6"}]
 
-	write_str = ""
-	keys = ["a", "b", "c", "d"]
-	for key in keys:
-		write_str += key + "::" + "\n"
+	basic_key_template = Template(filename='base-mapping/basic-key.ahk')
+	for position in keymap:
+		key_values = {
+			'key'  : position['key'],
+			'base' : position['base'],
+			'shift': position['shift'],
+			'num'  : position['num']
+		}  # key_values
+		basic_key = basic_key_template.render(**key_values)
+		remap.write(basic_key)
 
-	remap.write(write_str)
 	remap.close()
+
 
 def parse(json_file):
 	json_format = json.load(json_file)
@@ -21,12 +30,14 @@ def parse(json_file):
 
 def main():
 	physical = parse(open("layout-json/physical.json"))
-	#base = parse("/layout-json/base.json")
-	#shift = parse("/layout-json/shift.json")
-	#num = parse("/layout-json/num.json")
 
-	#keymap = {"physical": physical, "base": base, "shift": shift, "num": num}
+
+# base = parse("layout-json/base.json")
+# shift = parse("layout-json/shift.json")
+# num = parse("layout-json/num.json")
+
+# keymap = {"physical": physical, "base": base, "shift": shift, "num": num}
 
 
 if __name__ == '__main__':
-    main()
+	main()
