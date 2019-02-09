@@ -70,6 +70,11 @@ def create_keymap(physical_file, shift_file, num_file):
 	physical_data = json.load(physical_file) #Parse the .json file into a Python JSON object
 	shift_data = json.load(shift_file)
 	num_data = json.load(num_file)
+	physical_data = sanitize_json(physical_data)
+	shift_data = sanitize_json(shift_data)
+	num_data = sanitize_json(num_data)
+
+
 
 	#Iterate through the json object and create appropriate mappings
 	for i in range(0, len(physical_data)):
@@ -101,7 +106,10 @@ def create_keymap(physical_file, shift_file, num_file):
 					bot_row.append(sub_dict)
 
 
-	pretty(keymap)
+	#pretty(keymap)
+
+	with open('data.json', 'w') as outfile:
+		json.dump(keymap,outfile, indent=4)
 	return keymap
 
 
@@ -117,10 +125,16 @@ def pretty(d, indent=0):
 			print('\t' * (indent + 1) + str(value))
 
 
+def sanitize_json(json_data):
+	for i in range(0, len(json_data)):
+		newlist = []
+		for j in range(0, len(json_data[i])):
+			if(isinstance(json_data[i][j], str)):
+				newlist.append(json_data[i][j])
+		json_data[i] = newlist
+	return json_data
 
 
-	layout = {}
-	return layout
 
 
 def main():
