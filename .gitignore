@@ -2,5 +2,5 @@ Include/
 Lib/
 Scripts/
 .idea/
-pyenv.cfg
+pyvenv.cfg
 remap.ahk
