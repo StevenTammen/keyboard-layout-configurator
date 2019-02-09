@@ -1,4 +1,5 @@
 {
+<<<<<<< Updated upstream
     "Number": [
         {
             "shift": "",
@@ -199,10 +200,293 @@
             "num": "Pause",
             "base": " ",
             "key": "Pause"
-        }
-    ],
+=======
     "Bottom": [
         {
+            "num": "LShift",
+            "key": "LShift",
+            "base": " ",
+            "shift": "LShift"
+        },
+        {
+            "num": "",
+            "key": "z",
+            "base": " ",
+            "shift": "Z"
+        },
+        {
+            "num": "",
+            "key": "x",
+            "base": " ",
+            "shift": "X"
+        },
+        {
+            "num": "",
+            "key": "c",
+            "base": " ",
+            "shift": "C"
+        },
+        {
+            "num": "",
+            "key": "v",
+            "base": " ",
+            "shift": "V"
+        },
+        {
+            "num": "",
+            "key": "b",
+            "base": " ",
+            "shift": "B"
+        },
+        {
+            "num": "",
+            "key": "n",
+            "base": " ",
+            "shift": "N"
+        },
+        {
+            "num": "",
+            "key": "m",
+            "base": " ",
+            "shift": "M"
+        },
+        {
+            "num": "",
+            "key": ",",
+            "base": " ",
+            "shift": "<"
+        },
+        {
+            "num": "",
+            "key": ".",
+            "base": " ",
+            "shift": ">"
+        },
+        {
+            "num": "",
+            "key": "/",
+            "base": " ",
+            "shift": "?"
+        },
+        {
+            "num": "RShift",
+            "key": "RShift",
+            "base": " ",
+            "shift": "RShift"
+        },
+        {
+            "num": "Up",
+            "key": "Up",
+            "base": " ",
+            "shift": "Up"
+        }
+    ],
+    "Function": [
+        {
+            "num": "Esc",
+            "key": "Esc",
+            "base": " ",
+            "shift": "Esc"
+        },
+        {
+            "num": "F1",
+            "key": "F1",
+            "base": " ",
+            "shift": "F1"
+        },
+        {
+            "num": "F2",
+            "key": "F2",
+            "base": " ",
+            "shift": "F2"
+        },
+        {
+            "num": "F3",
+            "key": "F3",
+            "base": " ",
+            "shift": "F3"
+        },
+        {
+            "num": "F4",
+            "key": "F4",
+            "base": " ",
+            "shift": "F4"
+        },
+        {
+            "num": "F5",
+            "key": "F5",
+            "base": " ",
+            "shift": "F5"
+        },
+        {
+            "num": "F6",
+            "key": "F6",
+            "base": " ",
+            "shift": "F6"
+        },
+        {
+            "num": "F7",
+            "key": "F7",
+            "base": " ",
+            "shift": "F7"
+        },
+        {
+            "num": "F8",
+            "key": "F8",
+            "base": " ",
+            "shift": "F8"
+        },
+        {
+            "num": "F9",
+            "key": "F9",
+            "base": " ",
+            "shift": "F9"
+        },
+        {
+            "num": "F10",
+            "key": "F10",
+            "base": " ",
+            "shift": "F10"
+        },
+        {
+            "num": "F11",
+            "key": "F11",
+            "base": " ",
+            "shift": "F11"
+        },
+        {
+            "num": "F12",
+            "key": "F12",
+            "base": " ",
+            "shift": "F12"
+        },
+        {
+            "num": "PrintScreen",
+            "key": "PrintScreen",
+            "base": " ",
+            "shift": "PrintScreen"
+        },
+        {
+            "num": "ScrollLock",
+            "key": "ScrollLock",
+            "base": " ",
+            "shift": "ScrollLock"
+        },
+        {
+            "num": "Pause",
+            "key": "Pause",
+            "base": " ",
+            "shift": "Pause"
+        }
+    ],
+    "Top": [
+        {
+            "num": "Tab",
+            "key": "Tab",
+            "base": " ",
+            "shift": "Tab"
+        },
+        {
+            "num": "!",
+            "key": "q",
+            "base": " ",
+            "shift": "Q"
+        },
+        {
+            "num": "@",
+            "key": "w",
+            "base": " ",
+            "shift": "W"
+        },
+        {
+            "num": "#",
+            "key": "e",
+            "base": " ",
+            "shift": "E"
+        },
+        {
+            "num": "$",
+            "key": "r",
+            "base": " ",
+            "shift": "R"
+        },
+        {
+            "num": "%",
+            "key": "t",
+            "base": " ",
+            "shift": "T"
+        },
+        {
+            "num": "^",
+            "key": "y",
+            "base": " ",
+            "shift": "Y"
+        },
+        {
+            "num": "&",
+            "key": "u",
+            "base": " ",
+            "shift": "U"
+        },
+        {
+            "num": "*",
+            "key": "i",
+            "base": " ",
+            "shift": "I"
+        },
+        {
+            "num": "(",
+            "key": "o",
+            "base": " ",
+            "shift": "O"
+        },
+        {
+            "num": ")",
+            "key": "p",
+            "base": " ",
+            "shift": "P"
+        },
+        {
+            "num": "-",
+            "key": "[",
+            "base": " ",
+            "shift": "{"
+        },
+        {
+            "num": "=",
+            "key": "]",
+            "base": " ",
+            "shift": "}"
+        },
+        {
+            "num": "",
+            "key": "\\",
+            "base": " ",
+            "shift": "|"
+        },
+        {
+            "num": "Delete",
+            "key": "Delete",
+            "base": " ",
+            "shift": "Delete"
+        },
+        {
+            "num": "End",
+            "key": "End",
+            "base": " ",
+            "shift": "End"
+        },
+        {
+            "num": "PgDn",
+            "key": "PgDn",
+            "base": " ",
+            "shift": "PgDn"
+>>>>>>> Stashed changes
+        }
+    ],
+    "Number": [
+        {
+<<<<<<< Updated upstream
             "shift": "LShift",
             "num": "LShift",
             "base": " ",
@@ -279,10 +563,113 @@
             "num": "Up",
             "base": " ",
             "key": "Up"
+=======
+            "num": "",
+            "key": "`",
+            "base": " ",
+            "shift": ""
+        },
+        {
+            "num": "",
+            "key": "1",
+            "base": " ",
+            "shift": ""
+        },
+        {
+            "num": "",
+            "key": "2",
+            "base": " ",
+            "shift": ""
+        },
+        {
+            "num": "",
+            "key": "3",
+            "base": " ",
+            "shift": ""
+        },
+        {
+            "num": "",
+            "key": "4",
+            "base": " ",
+            "shift": ""
+        },
+        {
+            "num": "",
+            "key": "5",
+            "base": " ",
+            "shift": ""
+        },
+        {
+            "num": "",
+            "key": "6",
+            "base": " ",
+            "shift": ""
+        },
+        {
+            "num": "",
+            "key": "7",
+            "base": " ",
+            "shift": ""
+        },
+        {
+            "num": "",
+            "key": "8",
+            "base": " ",
+            "shift": ""
+        },
+        {
+            "num": "",
+            "key": "9",
+            "base": " ",
+            "shift": ""
+        },
+        {
+            "num": "",
+            "key": "0",
+            "base": " ",
+            "shift": ""
+        },
+        {
+            "num": "",
+            "key": "-",
+            "base": " ",
+            "shift": ""
+        },
+        {
+            "num": "",
+            "key": "=",
+            "base": " ",
+            "shift": ""
+        },
+        {
+            "num": "Backspace",
+            "key": "Backspace",
+            "base": " ",
+            "shift": "Backspace"
+        },
+        {
+            "num": "Insert",
+            "key": "Insert",
+            "base": " ",
+            "shift": "Insert"
+        },
+        {
+            "num": "Home",
+            "key": "Home",
+            "base": " ",
+            "shift": "Home"
+        },
+        {
+            "num": "PgUp",
+            "key": "PgUp",
+            "base": " ",
+            "shift": "PgUp"
+>>>>>>> Stashed changes
         }
     ],
     "Top": [
         {
+<<<<<<< Updated upstream
             "shift": "Tab",
             "num": "Tab",
             "base": " ",
@@ -463,6 +850,84 @@
             "num": "Enter",
             "base": " ",
             "key": "Enter"
+=======
+            "num": "CapsLock",
+            "key": "CapsLock",
+            "base": " ",
+            "shift": "CapsLock"
+        },
+        {
+            "num": "1",
+            "key": "a",
+            "base": " ",
+            "shift": "A"
+        },
+        {
+            "num": "2",
+            "key": "s",
+            "base": " ",
+            "shift": "S"
+        },
+        {
+            "num": "3",
+            "key": "d",
+            "base": " ",
+            "shift": "D"
+        },
+        {
+            "num": "4",
+            "key": "f",
+            "base": " ",
+            "shift": "F"
+        },
+        {
+            "num": "5",
+            "key": "g",
+            "base": " ",
+            "shift": "G"
+        },
+        {
+            "num": "6",
+            "key": "h",
+            "base": " ",
+            "shift": "H"
+        },
+        {
+            "num": "7",
+            "key": "j",
+            "base": " ",
+            "shift": "J"
+        },
+        {
+            "num": "8",
+            "key": "k",
+            "base": " ",
+            "shift": "K"
+        },
+        {
+            "num": "9",
+            "key": "l",
+            "base": " ",
+            "shift": "L"
+        },
+        {
+            "num": "0",
+            "key": ";",
+            "base": " ",
+            "shift": ":"
+        },
+        {
+            "num": "`",
+            "key": "'",
+            "base": " ",
+            "shift": "\""
+        },
+        {
+            "num": "Enter",
+            "key": "Enter",
+            "base": " ",
+            "shift": "Enter"
+>>>>>>> Stashed changes
         }
     ]
 }
