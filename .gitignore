@@ -1,4 +1,5 @@
 Include/
 Lib/
 Scripts/
+idea/
 pyenv.cfg
