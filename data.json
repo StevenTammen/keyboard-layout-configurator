@@ -1,0 +1,468 @@
+{
+    "Function": [
+        {
+            "num": "Esc",
+            "shift": "Esc",
+            "key": "Esc",
+            "base": " "
+        },
+        {
+            "num": "F1",
+            "shift": "F1",
+            "key": "F1",
+            "base": " "
+        },
+        {
+            "num": "F2",
+            "shift": "F2",
+            "key": "F2",
+            "base": " "
+        },
+        {
+            "num": "F3",
+            "shift": "F3",
+            "key": "F3",
+            "base": " "
+        },
+        {
+            "num": "F4",
+            "shift": "F4",
+            "key": "F4",
+            "base": " "
+        },
+        {
+            "num": "F5",
+            "shift": "F5",
+            "key": "F5",
+            "base": " "
+        },
+        {
+            "num": "F6",
+            "shift": "F6",
+            "key": "F6",
+            "base": " "
+        },
+        {
+            "num": "F7",
+            "shift": "F7",
+            "key": "F7",
+            "base": " "
+        },
+        {
+            "num": "F8",
+            "shift": "F8",
+            "key": "F8",
+            "base": " "
+        },
+        {
+            "num": "F9",
+            "shift": "F9",
+            "key": "F9",
+            "base": " "
+        },
+        {
+            "num": "F10",
+            "shift": "F10",
+            "key": "F10",
+            "base": " "
+        },
+        {
+            "num": "F11",
+            "shift": "F11",
+            "key": "F11",
+            "base": " "
+        },
+        {
+            "num": "F12",
+            "shift": "F12",
+            "key": "F12",
+            "base": " "
+        },
+        {
+            "num": "PrintScreen",
+            "shift": "PrintScreen",
+            "key": "PrintScreen",
+            "base": " "
+        },
+        {
+            "num": "ScrollLock",
+            "shift": "ScrollLock",
+            "key": "ScrollLock",
+            "base": " "
+        },
+        {
+            "num": "Pause",
+            "shift": "Pause",
+            "key": "Pause",
+            "base": " "
+        }
+    ],
+    "Number": [
+        {
+            "num": "",
+            "shift": "",
+            "key": "`",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": "",
+            "key": "1",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": "",
+            "key": "2",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": "",
+            "key": "3",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": "",
+            "key": "4",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": "",
+            "key": "5",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": "",
+            "key": "6",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": "",
+            "key": "7",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": "",
+            "key": "8",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": "",
+            "key": "9",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": "",
+            "key": "0",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": "",
+            "key": "-",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": "",
+            "key": "=",
+            "base": " "
+        },
+        {
+            "num": "Backspace",
+            "shift": "Backspace",
+            "key": "Backspace",
+            "base": " "
+        },
+        {
+            "num": "Insert",
+            "shift": "Insert",
+            "key": "Insert",
+            "base": " "
+        },
+        {
+            "num": "Home",
+            "shift": "Home",
+            "key": "Home",
+            "base": " "
+        },
+        {
+            "num": "PgUp",
+            "shift": "PgUp",
+            "key": "PgUp",
+            "base": " "
+        }
+    ],
+    "Bottom": [
+        {
+            "num": "LShift",
+            "shift": "LShift",
+            "key": "LShift",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": "Z",
+            "key": "z",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": "X",
+            "key": "x",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": "C",
+            "key": "c",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": "V",
+            "key": "v",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": "B",
+            "key": "b",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": "N",
+            "key": "n",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": "M",
+            "key": "m",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": "<",
+            "key": ",",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": ">",
+            "key": ".",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": "?",
+            "key": "/",
+            "base": " "
+        },
+        {
+            "num": "RShift",
+            "shift": "RShift",
+            "key": "RShift",
+            "base": " "
+        },
+        {
+            "num": "Up",
+            "shift": "Up",
+            "key": "Up",
+            "base": " "
+        }
+    ],
+    "Home": [
+        {
+            "num": "CapsLock",
+            "shift": "CapsLock",
+            "key": "CapsLock",
+            "base": " "
+        },
+        {
+            "num": "1",
+            "shift": "A",
+            "key": "a",
+            "base": " "
+        },
+        {
+            "num": "2",
+            "shift": "S",
+            "key": "s",
+            "base": " "
+        },
+        {
+            "num": "3",
+            "shift": "D",
+            "key": "d",
+            "base": " "
+        },
+        {
+            "num": "4",
+            "shift": "F",
+            "key": "f",
+            "base": " "
+        },
+        {
+            "num": "5",
+            "shift": "G",
+            "key": "g",
+            "base": " "
+        },
+        {
+            "num": "6",
+            "shift": "H",
+            "key": "h",
+            "base": " "
+        },
+        {
+            "num": "7",
+            "shift": "J",
+            "key": "j",
+            "base": " "
+        },
+        {
+            "num": "8",
+            "shift": "K",
+            "key": "k",
+            "base": " "
+        },
+        {
+            "num": "9",
+            "shift": "L",
+            "key": "l",
+            "base": " "
+        },
+        {
+            "num": "0",
+            "shift": ":",
+            "key": ";",
+            "base": " "
+        },
+        {
+            "num": "`",
+            "shift": "\"",
+            "key": "'",
+            "base": " "
+        },
+        {
+            "num": "Enter",
+            "shift": "Enter",
+            "key": "Enter",
+            "base": " "
+        }
+    ],
+    "Top": [
+        {
+            "num": "Tab",
+            "shift": "Tab",
+            "key": "Tab",
+            "base": " "
+        },
+        {
+            "num": "!",
+            "shift": "Q",
+            "key": "q",
+            "base": " "
+        },
+        {
+            "num": "@",
+            "shift": "W",
+            "key": "w",
+            "base": " "
+        },
+        {
+            "num": "#",
+            "shift": "E",
+            "key": "e",
+            "base": " "
+        },
+        {
+            "num": "$",
+            "shift": "R",
+            "key": "r",
+            "base": " "
+        },
+        {
+            "num": "%",
+            "shift": "T",
+            "key": "t",
+            "base": " "
+        },
+        {
+            "num": "^",
+            "shift": "Y",
+            "key": "y",
+            "base": " "
+        },
+        {
+            "num": "&",
+            "shift": "U",
+            "key": "u",
+            "base": " "
+        },
+        {
+            "num": "*",
+            "shift": "I",
+            "key": "i",
+            "base": " "
+        },
+        {
+            "num": "(",
+            "shift": "O",
+            "key": "o",
+            "base": " "
+        },
+        {
+            "num": ")",
+            "shift": "P",
+            "key": "p",
+            "base": " "
+        },
+        {
+            "num": "-",
+            "shift": "{",
+            "key": "[",
+            "base": " "
+        },
+        {
+            "num": "=",
+            "shift": "}",
+            "key": "]",
+            "base": " "
+        },
+        {
+            "num": "",
+            "shift": "|",
+            "key": "\\",
+            "base": " "
+        },
+        {
+            "num": "Delete",
+            "shift": "Delete",
+            "key": "Delete",
+            "base": " "
+        },
+        {
+            "num": "End",
+            "shift": "End",
+            "key": "End",
+            "base": " "
+        },
+        {
+            "num": "PgDn",
+            "shift": "PgDn",
+            "key": "PgDn",
+            "base": " "
+        }
+    ]
+}
