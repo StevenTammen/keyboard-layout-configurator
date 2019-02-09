@@ -3,21 +3,57 @@ from mako.template import Template
 
 
 def create_mapping(keymap):
-	remap = open("layout/remap.ahk", "w")
-	keymap = [{"key": "a", "base": "x", "shift": "X", "num": "5"}, {"key": "s", "base": "z", "shift": "Z", "num": "6"}]
+	"""
+		Creates a remapping script based on the JSON layouts parsed into a keymap object
+	"""
 
-	basic_key_template = Template(filename='base-mapping/basic-key.ahk')
-	for position in keymap:
-		key_values = {
-			'key'  : position['key'],
-			'base' : position['base'],
-			'shift': position['shift'],
-			'num'  : position['num']
-		}  # key_values
-		basic_key = basic_key_template.render(**key_values)
-		remap.write(basic_key)
+	remap = open("layout/remap.ahk", "w")
+
+	variable_definitions_template = Template(filename='ahk-templates/base-mapping/variable-definitions.ahk')
+	variable_definitions = variable_definitions_template.render()
+	remap.write(variable_definitions)
+
+	row_names = ["Function", "Number", "Top", "Home", "Bottom"]
+	basic_key_template = Template(filename='ahk-templates/base-mapping/basic-key.ahk')
+	modifier_key_template = Template(filename='ahk-templates/base-mapping/modifier-key.ahk')
+
+	for row_name in row_names:
+
+		remap.write("; " + row_name + " -----------------------------------------\n\n")
+		row = keymap[row_name]
+
+		for position in row:
+
+			key = position['key']
+			base_key = position['base']
+			if base_key=="Num":
+
+			if is_modifier(key):
+				# Remove left/right designation and make lowercase to
+				# use modifier as a prefix
+				prefix = (key[1:]).lower()
+				modifier_key_vars = {
+					'modifier': key,
+					'prefix': prefix
+				}
+				modifier_key = modifier_key_template.render(**modifier_key_vars)
+				remap.write(modifier_key)
+
+			else:
+				basic_key_vars = {
+					'key': key
+				}
+				basic_key = basic_key_template.render(**basic_key_vars)
+				remap.write(basic_key)
+
+		remap.write("\n\n\n")
 
 	remap.close()
+
+
+def is_modifier(key):
+	modifiers = ["LShift", "LCtrl", "LAlt", "LWin", "RShift", "RCtrl", "RAlt", "RWin"]
+	return (key in modifiers)
 
 
 def create_keymap(physical_file, shift_file, num_file):
@@ -89,7 +125,7 @@ def pretty(d, indent=0):
 
 def main():
 	keymap = create_keymap(open("layout-json/physical.json"), open("layout-json/shift.json"), open("layout-json/num.json"))
-
+	create_mapping(keymap)
 
 
 
