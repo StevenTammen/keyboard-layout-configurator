@@ -1,6 +1,9 @@
-Include/
-Lib/
-Scripts/
+bin/
+include/
+lib/
+lib64
+share/
 .idea/
 pyvenv.cfg
+pip-selfcheck.json
 remap.ahk
