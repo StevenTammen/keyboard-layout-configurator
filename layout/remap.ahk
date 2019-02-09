@@ -377,290 +377,290 @@ Pause::
 
 ; Number -----------------------------------------
 
-`::
+backtick::
 	if(GetKeyState(numLeader))
 	{
-		`_numLeader()
+		backtick_numLeader()
 	}
 	else if(numModifier)
 	{
-		`_numModifier()
+		backtick_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		`_shiftLeader()
+		backtick_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		`_shiftModifier()
+		backtick_shiftModifier()
 	}
 	else
 	{
-		`_base()
+		backtick_base()
 	}
 
-1::
+one::
 	if(GetKeyState(numLeader))
 	{
-		1_numLeader()
+		one_numLeader()
 	}
 	else if(numModifier)
 	{
-		1_numModifier()
+		one_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		1_shiftLeader()
+		one_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		1_shiftModifier()
+		one_shiftModifier()
 	}
 	else
 	{
-		1_base()
+		one_base()
 	}
 
-2::
+two::
 	if(GetKeyState(numLeader))
 	{
-		2_numLeader()
+		two_numLeader()
 	}
 	else if(numModifier)
 	{
-		2_numModifier()
+		two_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		2_shiftLeader()
+		two_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		2_shiftModifier()
+		two_shiftModifier()
 	}
 	else
 	{
-		2_base()
+		two_base()
 	}
 
-3::
+three::
 	if(GetKeyState(numLeader))
 	{
-		3_numLeader()
+		three_numLeader()
 	}
 	else if(numModifier)
 	{
-		3_numModifier()
+		three_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		3_shiftLeader()
+		three_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		3_shiftModifier()
+		three_shiftModifier()
 	}
 	else
 	{
-		3_base()
+		three_base()
 	}
 
-4::
+four::
 	if(GetKeyState(numLeader))
 	{
-		4_numLeader()
+		four_numLeader()
 	}
 	else if(numModifier)
 	{
-		4_numModifier()
+		four_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		4_shiftLeader()
+		four_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		4_shiftModifier()
+		four_shiftModifier()
 	}
 	else
 	{
-		4_base()
+		four_base()
 	}
 
-5::
+five::
 	if(GetKeyState(numLeader))
 	{
-		5_numLeader()
+		five_numLeader()
 	}
 	else if(numModifier)
 	{
-		5_numModifier()
+		five_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		5_shiftLeader()
+		five_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		5_shiftModifier()
+		five_shiftModifier()
 	}
 	else
 	{
-		5_base()
+		five_base()
 	}
 
-6::
+six::
 	if(GetKeyState(numLeader))
 	{
-		6_numLeader()
+		six_numLeader()
 	}
 	else if(numModifier)
 	{
-		6_numModifier()
+		six_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		6_shiftLeader()
+		six_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		6_shiftModifier()
+		six_shiftModifier()
 	}
 	else
 	{
-		6_base()
+		six_base()
 	}
 
-7::
+seven::
 	if(GetKeyState(numLeader))
 	{
-		7_numLeader()
+		seven_numLeader()
 	}
 	else if(numModifier)
 	{
-		7_numModifier()
+		seven_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		7_shiftLeader()
+		seven_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		7_shiftModifier()
+		seven_shiftModifier()
 	}
 	else
 	{
-		7_base()
+		seven_base()
 	}
 
-8::
+eight::
 	if(GetKeyState(numLeader))
 	{
-		8_numLeader()
+		eight_numLeader()
 	}
 	else if(numModifier)
 	{
-		8_numModifier()
+		eight_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		8_shiftLeader()
+		eight_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		8_shiftModifier()
+		eight_shiftModifier()
 	}
 	else
 	{
-		8_base()
+		eight_base()
 	}
 
-9::
+nine::
 	if(GetKeyState(numLeader))
 	{
-		9_numLeader()
+		nine_numLeader()
 	}
 	else if(numModifier)
 	{
-		9_numModifier()
+		nine_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		9_shiftLeader()
+		nine_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		9_shiftModifier()
+		nine_shiftModifier()
 	}
 	else
 	{
-		9_base()
+		nine_base()
 	}
 
-0::
+zero::
 	if(GetKeyState(numLeader))
 	{
-		0_numLeader()
+		zero_numLeader()
 	}
 	else if(numModifier)
 	{
-		0_numModifier()
+		zero_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		0_shiftLeader()
+		zero_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		0_shiftModifier()
+		zero_shiftModifier()
 	}
 	else
 	{
-		0_base()
+		zero_base()
 	}
 
--::
+hyphen::
 	if(GetKeyState(numLeader))
 	{
-		-_numLeader()
+		hyphen_numLeader()
 	}
 	else if(numModifier)
 	{
-		-_numModifier()
+		hyphen_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		-_shiftLeader()
+		hyphen_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		-_shiftModifier()
+		hyphen_shiftModifier()
 	}
 	else
 	{
-		-_base()
+		hyphen_base()
 	}
 
-=::
+equals::
 	if(GetKeyState(numLeader))
 	{
-		=_numLeader()
+		equals_numLeader()
 	}
 	else if(numModifier)
 	{
-		=_numModifier()
+		equals_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		=_shiftLeader()
+		equals_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		=_shiftModifier()
+		equals_shiftModifier()
 	}
 	else
 	{
-		=_base()
+		equals_base()
 	}
 
 Backspace::
@@ -998,70 +998,70 @@ p::
 		p_base()
 	}
 
-[::
+opening_bracket::
 	if(GetKeyState(numLeader))
 	{
-		[_numLeader()
+		opening_bracket_numLeader()
 	}
 	else if(numModifier)
 	{
-		[_numModifier()
+		opening_bracket_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		[_shiftLeader()
+		opening_bracket_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		[_shiftModifier()
+		opening_bracket_shiftModifier()
 	}
 	else
 	{
-		[_base()
+		opening_bracket_base()
 	}
 
-]::
+closing_bracket::
 	if(GetKeyState(numLeader))
 	{
-		]_numLeader()
+		closing_bracket_numLeader()
 	}
 	else if(numModifier)
 	{
-		]_numModifier()
+		closing_bracket_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		]_shiftLeader()
+		closing_bracket_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		]_shiftModifier()
+		closing_bracket_shiftModifier()
 	}
 	else
 	{
-		]_base()
+		closing_bracket_base()
 	}
 
-\::
+backslash::
 	if(GetKeyState(numLeader))
 	{
-		\_numLeader()
+		backslash_numLeader()
 	}
 	else if(numModifier)
 	{
-		\_numModifier()
+		backslash_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		\_shiftLeader()
+		backslash_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		\_shiftModifier()
+		backslash_shiftModifier()
 	}
 	else
 	{
-		\_base()
+		backslash_base()
 	}
 
 Delete::
@@ -1355,48 +1355,48 @@ l::
 		l_base()
 	}
 
-;::
+semicolon::
 	if(GetKeyState(numLeader))
 	{
-		;_numLeader()
+		semicolon_numLeader()
 	}
 	else if(numModifier)
 	{
-		;_numModifier()
+		semicolon_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		;_shiftLeader()
+		semicolon_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		;_shiftModifier()
+		semicolon_shiftModifier()
 	}
 	else
 	{
-		;_base()
+		semicolon_base()
 	}
 
-'::
+apostrophe::
 	if(GetKeyState(numLeader))
 	{
-		'_numLeader()
+		apostrophe_numLeader()
 	}
 	else if(numModifier)
 	{
-		'_numModifier()
+		apostrophe_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		'_shiftLeader()
+		apostrophe_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		'_shiftModifier()
+		apostrophe_shiftModifier()
 	}
 	else
 	{
-		'_base()
+		apostrophe_base()
 	}
 
 Enter::
@@ -1589,70 +1589,70 @@ m::
 		m_base()
 	}
 
-,::
+comma::
 	if(GetKeyState(numLeader))
 	{
-		,_numLeader()
+		comma_numLeader()
 	}
 	else if(numModifier)
 	{
-		,_numModifier()
+		comma_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		,_shiftLeader()
+		comma_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		,_shiftModifier()
+		comma_shiftModifier()
 	}
 	else
 	{
-		,_base()
+		comma_base()
 	}
 
-.::
+period::
 	if(GetKeyState(numLeader))
 	{
-		._numLeader()
+		period_numLeader()
 	}
 	else if(numModifier)
 	{
-		._numModifier()
+		period_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		._shiftLeader()
+		period_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		._shiftModifier()
+		period_shiftModifier()
 	}
 	else
 	{
-		._base()
+		period_base()
 	}
 
-/::
+slash::
 	if(GetKeyState(numLeader))
 	{
-		/_numLeader()
+		slash_numLeader()
 	}
 	else if(numModifier)
 	{
-		/_numModifier()
+		slash_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		/_shiftLeader()
+		slash_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		/_shiftModifier()
+		slash_shiftModifier()
 	}
 	else
 	{
-		/_base()
+		slash_base()
 	}
 
 RShift::
