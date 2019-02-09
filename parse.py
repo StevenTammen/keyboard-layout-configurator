@@ -24,7 +24,7 @@ def create_mapping(keymap):
 
 		for position in row:
 
-			key = position['key']
+			key = clean(position['key'])
 			base_key = position['base']
 
 			if is_modifier(key):
@@ -49,6 +49,90 @@ def create_mapping(keymap):
 
 	remap.close()
 
+
+def clean(key):
+	if key == "`":
+		return "backtick"
+	elif key == "1":
+		return "one"
+	elif key == "2":
+		return "two"
+	elif key == "3":
+		return "three"
+	elif key == "4":
+		return "four"
+	elif key == "5":
+		return "five"
+	elif key == "6":
+		return "six"
+	elif key == "7":
+		return "seven"
+	elif key == "8":
+		return "eight"
+	elif key == "9":
+		return "nine"
+	elif key == "0":
+		return "zero"
+	elif key == "-":
+		return "hyphen"
+	elif key == "=":
+		return "equals"
+	elif key == "~":
+		return "tilde"
+	elif key == "!":
+		return "exclamation_point"
+	elif key == "@":
+		return "at_symbol"
+	elif key == "#":
+		return "pound_sign"
+	elif key == "%":
+		return "percent_sign"
+	elif key == "^":
+		return "caret"
+	elif key == "&":
+		return 'ampersand'
+	elif key == "*":
+		return "asterisk"
+	elif key == "(":
+		return "opening_parenthesis"
+	elif key == ")":
+		return "closing_parenthesis"
+	elif key == "+":
+		return "plus"
+	elif key == "\\":
+		return "backslash"
+	elif key == "[":
+		return "opening_bracket"
+	elif key == "]":
+		return "closing_bracket"
+	elif key == "{":
+		return "opening_curly_brace"
+	elif key == "}":
+		return "closing_curly_brace"
+	elif key == "|":
+		return "pipe"
+	elif key == ";":
+		return "semicolon"
+	elif key == "'":
+		return "apostrophe"
+	elif key == ":":
+		return "colon"
+	elif key == "\"":
+		return "quotes"
+	elif key == ",":
+		return "comma"
+	elif key == ".":
+		return "period"
+	elif key == "/":
+		return "slash"
+	elif key == "<":
+		return "less_than"
+	elif key == ">":
+		return "greater_than"
+	elif key == "?":
+		return "question_mark"
+	else:
+		return key
 
 def is_modifier(key):
 	modifiers = ["LShift", "LCtrl", "LAlt", "LWin", "RShift", "RCtrl", "RAlt", "RWin"]
