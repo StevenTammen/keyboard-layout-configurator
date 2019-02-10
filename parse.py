@@ -9,49 +9,268 @@ def create_mapping(keymap):
 
 	remap = open("layout/remap.ahk", "w")
 
+	num_leader = open("layout/Lib/layers/numLeader.ahk", "w")
+	num_modifier = open("layout/Lib/layers/numModifier.ahk", "w")
+	shift_leader = open("layout/Lib/layers/shiftLeader.ahk", "w")
+	shift_modifier = open("layout/Lib/layers/shiftModifier.ahk", "w")
+	base = open("layout/Lib/layers/base.ahk", "w")
+
+	alt = open("layout/Lib/layers/modifiers/Alt.ahk", "w")
+	alt_shift = open("layout/Lib/layers/modifiers/AltShift.ahk", "w")
+	alt_shift_win = open("layout/Lib/layers/modifiers/AltShiftWin.ahk", "w")
+	alt_win = open("layout/Lib/layers/modifiers/AltWin.ahk", "w")
+
+	ctrl = open("layout/Lib/layers/modifiers/Ctrl.ahk", "w")
+	ctrl_alt = open("layout/Lib/layers/modifiers/CtrlAlt.ahk", "w")
+	ctrl_alt_shift = open("layout/Lib/layers/modifiers/CtrlAltShift.ahk", "w")
+	ctrl_alt_shift_win = open("layout/Lib/layers/modifiers/CtrlAltShiftWin.ahk", "w")
+	ctrl_alt_win = open("layout/Lib/layers/modifiers/CtrlAltWin.ahk", "w")
+	ctrl_shift = open("layout/Lib/layers/modifiers/CtrlShift.ahk", "w")
+	ctrl_shift_win = open("layout/Lib/layers/modifiers/CtrlShiftWin.ahk", "w")
+	ctrl_win = open("layout/Lib/layers/modifiers/CtrlWin.ahk", "w")
+
+	shift_win = open("layout/Lib/layers/modifiers/ShiftWin.ahk", "w")
+	win = open("layout/Lib/layers/modifiers/Win.ahk", "w")
+
+	files = \
+		[
+			remap,
+			num_leader, num_modifier, shift_leader, shift_modifier, base,
+			alt, alt_shift, alt_shift_win, alt_win,
+			ctrl, ctrl_alt, ctrl_alt_shift, ctrl_alt_shift_win,
+			ctrl_alt_win, ctrl_shift, ctrl_shift_win, ctrl_win,
+			shift_win, win
+		]
+
+	modifier_files = \
+		{
+			"Alt": alt,
+			"AltShift": alt_shift,
+			"AltShiftWin": alt_shift_win,
+			"AltWin": alt_win,
+			"Ctrl": ctrl,
+			"CtrlAlt": ctrl_alt,
+			"CtrlAltShift": ctrl_alt_shift,
+			"CtrlAltShiftWin": ctrl_alt_shift_win,
+			"CtrlAltWin": ctrl_alt_win,
+			"CtrlShift": ctrl_shift,
+			"CtrlShiftWin": ctrl_shift_win,
+			"CtrlWin": ctrl_win,
+			"ShiftWin": shift_win,
+			"Win": win
+	}
+
+	add_script_setup(remap)
+
+	row_names = ["Function", "Number", "Top", "Home", "Bottom"]
+	for row_name in row_names:
+		add_row_labels(files, row_name)
+		row = keymap[row_name]
+		for position in row:
+
+			key = escape_for_autohotkey(position['key'])
+			cleaned_key = to_text(position['key'])
+			num_key = escape_for_autohotkey(position['num'])
+			shift_key = escape_for_autohotkey(position['shift'])
+			base_key = escape_for_autohotkey(position['base'])
+
+			add_to_remap(remap, key, cleaned_key, num_key)
+			add_to_num(num_leader, num_modifier, cleaned_key, num_key)
+			add_to_shift(shift_leader, shift_modifier, cleaned_key, shift_key)
+			add_to_base(base, cleaned_key, base_key)
+			add_to_modifiers(modifier_files, cleaned_key)
+
+		add_space_between_rows(files)
+
+	close_files(files)
+
+
+def add_script_setup(remap):
 	variable_definitions_template = Template(filename='ahk-templates/base-mapping/variable-definitions.ahk')
 	variable_definitions = variable_definitions_template.render()
 	remap.write(variable_definitions)
 
-	row_names = ["Function", "Number", "Top", "Home", "Bottom"]
+
+def add_row_labels(files, row_name):
+	for file in files:
+		file.write("; " + row_name + " -----------------------------------------\n\n")
+
+
+def add_space_between_rows(files):
+	for file in files:
+		file.write("\n\n\n")
+
+
+def close_files(files):
+	for file in files:
+		file.close()
+
+
+def add_to_remap(remap, key, cleaned_key, num_key):
+	"""
+	Adds a key to the remapping script
+
+	:param remap:
+	:param key:
+	:param cleaned_key:
+	:return:
+	"""
+
 	basic_key_template = Template(filename='ahk-templates/base-mapping/basic-key.ahk')
 	modifier_key_template = Template(filename='ahk-templates/base-mapping/modifier-key.ahk')
 
-	for row_name in row_names:
+	if is_modifier(key):
+		# Remove left/right designation and make lowercase to
+		# use modifier as a prefix
+		prefix = (key[1:]).lower()
+		modifier_key_vars = {
+			'modifier': key,
+			'prefix'  : prefix
+		}
+		modifier_key = modifier_key_template.render(**modifier_key_vars)
+		remap.write(modifier_key)
 
-		remap.write("; " + row_name + " -----------------------------------------\n\n")
-		row = keymap[row_name]
-
-		for position in row:
-
-			key = clean(position['key'])
-			base_key = position['base']
-
-			if is_modifier(key):
-				# Remove left/right designation and make lowercase to
-				# use modifier as a prefix
-				prefix = (key[1:]).lower()
-				modifier_key_vars = {
-					'modifier': key,
-					'prefix'  : prefix
-				}
-				modifier_key = modifier_key_template.render(**modifier_key_vars)
-				remap.write(modifier_key)
-
-			else:
-				basic_key_vars = {
-					'key': key
-				}
-				basic_key = basic_key_template.render(**basic_key_vars)
-				remap.write(basic_key)
-
-		remap.write("\n\n\n")
-
-	remap.close()
+	else:
+		basic_key_vars = {
+			'key': key,
+			'cleaned_key': cleaned_key,
+			'num_key': num_key
+		}
+		basic_key = basic_key_template.render(**basic_key_vars)
+		remap.write(basic_key)
 
 
-def clean(key):
-	if key == "`":
+def add_to_num(num_leader, num_modifier, cleaned_key, num_key):
+	"""
+	Adds functions to the numLeader and numModifier scripts to implement
+	number layer functionality.
+
+	:param num_leader:
+	:param num_modifier:
+	:param cleaned_key:
+	:param num_key:
+	:return:
+	"""
+
+	# num_leader layer
+	num_leader_key_template = Template(filename='ahk-templates/layers/numLeader.ahk')
+	num_leader_key_vars = {
+		'cleaned_key': cleaned_key,
+		'num_key': num_key
+	}
+	num_leader_key = num_leader_key_template.render(**num_leader_key_vars)
+	num_leader.write(num_leader_key)
+
+	# num_modifier layer
+	num_modifier_key_template = Template(filename='ahk-templates/layers/numModifier.ahk')
+	num_modifier_key_vars = {
+		'cleaned_key': cleaned_key,
+		'num_key': num_key
+	}
+	num_modifier_key = num_modifier_key_template.render(**num_modifier_key_vars)
+	num_modifier.write(num_modifier_key)
+
+
+def add_to_shift(shift_leader, shift_modifier, cleaned_key, shift_key):
+	"""
+	Adds functions to the shiftLeader and shiftModifier scripts to implement
+	shift layer functionality.
+
+	:param shift_leader:
+	:param shift_modifier:
+	:param cleaned_key:
+	:param shift_key:
+	:return:
+	"""
+
+	# shift_leader layer
+	shift_leader_key_template = Template(filename='ahk-templates/layers/shiftLeader.ahk')
+	shift_leader_key_vars = {
+		'cleaned_key': cleaned_key,
+		'shift_key': shift_key
+	}
+	shift_leader_key = shift_leader_key_template.render(**shift_leader_key_vars)
+	shift_leader.write(shift_leader_key)
+
+	# shift_modifier layer
+	shift_modifier_key_template = Template(filename='ahk-templates/layers/shiftModifier.ahk')
+	shift_modifier_key_vars = {
+		'cleaned_key': cleaned_key,
+		'shift_key': shift_key
+	}
+	shift_modifier_key = shift_modifier_key_template.render(**shift_modifier_key_vars)
+	shift_modifier.write(shift_modifier_key)
+
+
+def add_to_base(base, cleaned_key, base_key):
+	"""
+	Adds functions to the base layer script to implement
+	base layer functionality.
+
+	:param base:
+	:param cleaned_key:
+	:param base_key:
+	:return:
+	"""
+	base_key_template = Template(filename='ahk-templates/layers/base.ahk')
+	base_key_vars = {
+		'cleaned_key': cleaned_key,
+		'base_key': base_key
+	}
+	base_key = base_key_template.render(**base_key_vars)
+	base.write(base_key)
+
+
+def add_to_modifiers(modifier_files, cleaned_key):
+	for modifier_combo in modifier_files:
+		file = 'ahk-templates/layers/modifiers/' + modifier_combo + '.ahk'
+		modifier_key_template = Template(filename=file)
+		modifier_key_vars = {
+			'cleaned_key': cleaned_key
+		}
+		modifier_key = modifier_key_template.render(**modifier_key_vars)
+		modifier_files[modifier_combo].write(modifier_key)
+
+
+def escape_for_autohotkey(key):
+	"""
+	Uses ` to escape the input key, as necessary, for use in AutoHotkey.
+	Keys that need to be escaped can be found at the following link:
+
+	https://autohotkey.com/docs/commands/_EscapeChar.htm
+
+	:param key:
+	:return:
+	"""
+	# if key == ",":
+	#	return "`,"
+	if key == "%":
+		return "`%"
+	# elif key == "`":
+	#	return "``"
+	elif key == ";":
+		return "`;"
+	else:
+		return key
+
+
+def to_text(key):
+	"""
+	Cleans up the input key to allow it to be used as a function prefix.
+
+	:param key:
+	:return:
+	"""
+
+	# AutoHotkey has reserved variables beginning with a_, such as A_PriorHotkey.
+	# To prevent any possible conflicts, we'll just use "aa" as a prefix for the a key.
+	if key == "a":
+		return "aa"
+
+	# To allow for smooth calling of functions, we need to clean up number and symbol
+	# keys, to turn them into text representations. This is to prevent calling a
+	# function like @_doStuff().
+	elif key == "`":
 		return "backtick"
 	elif key == "1":
 		return "one"

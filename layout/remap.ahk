@@ -1,3 +1,35 @@
+#NoEnv
+SendMode Input
+#SingleInstance force
+
+; Import classes and functions -----------------------------------------
+
+#Include <dual/dual>
+#Include <modifiers>
+
+#Include <layers/numLeader>
+#Include <layers/numModifier>
+#Include <layers/shiftLeader>
+#Include <layers/shiftModifier>
+#Include <layers/base>
+
+#Include <layers/modifiers/Alt>
+#Include <layers/modifiers/AltShift>
+#Include <layers/modifiers/AltShiftWin>
+#Include <layers/modifiers/AltWin>
+#Include <layers/modifiers/Ctrl>
+#Include <layers/modifiers/CtrlAlt>
+#Include <layers/modifiers/CtrlAltShift>
+#Include <layers/modifiers/CtrlAltShiftWin>
+#Include <layers/modifiers/CtrlAltWin>
+#Include <layers/modifiers/CtrlShift>
+#Include <layers/modifiers/CtrlShiftWin>
+#Include <layers/modifiers/CtrlWin>
+#Include <layers/modifiers/ShiftWin>
+#Include <layers/modifiers/Win>
+
+; Create key aliases -----------------------------------------
+
 global shiftLeader := "VK8A"
 global ctrlLeader := "VK8B"
 global altLeader := "VK8C"
@@ -18,10 +50,19 @@ global ctrlModifier := false
 global altModifier := false
 global winModifier := false
 
+; Initalize objects -----------------------------------------
+
+dual := new Dual
+
+
 ; Function -----------------------------------------
 
-Esc::
-	if(GetKeyState(numLeader))
+*Esc::
+	if(Modifiers("Esc", "{Esc}", "{Esc}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		Esc_numLeader()
 	}
@@ -42,8 +83,12 @@ Esc::
 		Esc_base()
 	}
 
-F1::
-	if(GetKeyState(numLeader))
+*F1::
+	if(Modifiers("F1", "{F1}", "{F1}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F1_numLeader()
 	}
@@ -64,8 +109,12 @@ F1::
 		F1_base()
 	}
 
-F2::
-	if(GetKeyState(numLeader))
+*F2::
+	if(Modifiers("F2", "{F2}", "{F2}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F2_numLeader()
 	}
@@ -86,8 +135,12 @@ F2::
 		F2_base()
 	}
 
-F3::
-	if(GetKeyState(numLeader))
+*F3::
+	if(Modifiers("F3", "{F3}", "{F3}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F3_numLeader()
 	}
@@ -108,8 +161,12 @@ F3::
 		F3_base()
 	}
 
-F4::
-	if(GetKeyState(numLeader))
+*F4::
+	if(Modifiers("F4", "{F4}", "{F4}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F4_numLeader()
 	}
@@ -130,8 +187,12 @@ F4::
 		F4_base()
 	}
 
-F5::
-	if(GetKeyState(numLeader))
+*F5::
+	if(Modifiers("F5", "{F5}", "{F5}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F5_numLeader()
 	}
@@ -152,8 +213,12 @@ F5::
 		F5_base()
 	}
 
-F6::
-	if(GetKeyState(numLeader))
+*F6::
+	if(Modifiers("F6", "{F6}", "{F6}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F6_numLeader()
 	}
@@ -174,8 +239,12 @@ F6::
 		F6_base()
 	}
 
-F7::
-	if(GetKeyState(numLeader))
+*F7::
+	if(Modifiers("F7", "{F7}", "{F7}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F7_numLeader()
 	}
@@ -196,8 +265,12 @@ F7::
 		F7_base()
 	}
 
-F8::
-	if(GetKeyState(numLeader))
+*F8::
+	if(Modifiers("F8", "{F8}", "{F8}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F8_numLeader()
 	}
@@ -218,8 +291,12 @@ F8::
 		F8_base()
 	}
 
-F9::
-	if(GetKeyState(numLeader))
+*F9::
+	if(Modifiers("F9", "{F9}", "{F9}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F9_numLeader()
 	}
@@ -240,8 +317,12 @@ F9::
 		F9_base()
 	}
 
-F10::
-	if(GetKeyState(numLeader))
+*F10::
+	if(Modifiers("F10", "{F10}", "{F10}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F10_numLeader()
 	}
@@ -262,8 +343,12 @@ F10::
 		F10_base()
 	}
 
-F11::
-	if(GetKeyState(numLeader))
+*F11::
+	if(Modifiers("F11", "{F11}", "{F11}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F11_numLeader()
 	}
@@ -284,8 +369,12 @@ F11::
 		F11_base()
 	}
 
-F12::
-	if(GetKeyState(numLeader))
+*F12::
+	if(Modifiers("F12", "{F12}", "{F12}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F12_numLeader()
 	}
@@ -306,8 +395,12 @@ F12::
 		F12_base()
 	}
 
-PrintScreen::
-	if(GetKeyState(numLeader))
+*PrintScreen::
+	if(Modifiers("PrintScreen", "{PrintScreen}", "{PrintScreen}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		PrintScreen_numLeader()
 	}
@@ -328,8 +421,12 @@ PrintScreen::
 		PrintScreen_base()
 	}
 
-ScrollLock::
-	if(GetKeyState(numLeader))
+*ScrollLock::
+	if(Modifiers("ScrollLock", "{ScrollLock}", "{ScrollLock}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		ScrollLock_numLeader()
 	}
@@ -350,8 +447,12 @@ ScrollLock::
 		ScrollLock_base()
 	}
 
-Pause::
-	if(GetKeyState(numLeader))
+*Pause::
+	if(Modifiers("Pause", "{Pause}", "{Pause}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		Pause_numLeader()
 	}
@@ -377,8 +478,12 @@ Pause::
 
 ; Number -----------------------------------------
 
-backtick::
-	if(GetKeyState(numLeader))
+*`::
+	if(Modifiers("backtick", "{`}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		backtick_numLeader()
 	}
@@ -399,8 +504,12 @@ backtick::
 		backtick_base()
 	}
 
-one::
-	if(GetKeyState(numLeader))
+*1::
+	if(Modifiers("one", "{1}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		one_numLeader()
 	}
@@ -421,8 +530,12 @@ one::
 		one_base()
 	}
 
-two::
-	if(GetKeyState(numLeader))
+*2::
+	if(Modifiers("two", "{2}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		two_numLeader()
 	}
@@ -443,8 +556,12 @@ two::
 		two_base()
 	}
 
-three::
-	if(GetKeyState(numLeader))
+*3::
+	if(Modifiers("three", "{3}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		three_numLeader()
 	}
@@ -465,8 +582,12 @@ three::
 		three_base()
 	}
 
-four::
-	if(GetKeyState(numLeader))
+*4::
+	if(Modifiers("four", "{4}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		four_numLeader()
 	}
@@ -487,8 +608,12 @@ four::
 		four_base()
 	}
 
-five::
-	if(GetKeyState(numLeader))
+*5::
+	if(Modifiers("five", "{5}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		five_numLeader()
 	}
@@ -509,8 +634,12 @@ five::
 		five_base()
 	}
 
-six::
-	if(GetKeyState(numLeader))
+*6::
+	if(Modifiers("six", "{6}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		six_numLeader()
 	}
@@ -531,8 +660,12 @@ six::
 		six_base()
 	}
 
-seven::
-	if(GetKeyState(numLeader))
+*7::
+	if(Modifiers("seven", "{7}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		seven_numLeader()
 	}
@@ -553,8 +686,12 @@ seven::
 		seven_base()
 	}
 
-eight::
-	if(GetKeyState(numLeader))
+*8::
+	if(Modifiers("eight", "{8}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		eight_numLeader()
 	}
@@ -575,8 +712,12 @@ eight::
 		eight_base()
 	}
 
-nine::
-	if(GetKeyState(numLeader))
+*9::
+	if(Modifiers("nine", "{9}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		nine_numLeader()
 	}
@@ -597,8 +738,12 @@ nine::
 		nine_base()
 	}
 
-zero::
-	if(GetKeyState(numLeader))
+*0::
+	if(Modifiers("zero", "{0}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		zero_numLeader()
 	}
@@ -619,8 +764,12 @@ zero::
 		zero_base()
 	}
 
-hyphen::
-	if(GetKeyState(numLeader))
+*-::
+	if(Modifiers("hyphen", "{-}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		hyphen_numLeader()
 	}
@@ -641,8 +790,12 @@ hyphen::
 		hyphen_base()
 	}
 
-equals::
-	if(GetKeyState(numLeader))
+*=::
+	if(Modifiers("equals", "{=}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		equals_numLeader()
 	}
@@ -663,8 +816,12 @@ equals::
 		equals_base()
 	}
 
-Backspace::
-	if(GetKeyState(numLeader))
+*Backspace::
+	if(Modifiers("Backspace", "{Backspace}", "{Backspace}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		Backspace_numLeader()
 	}
@@ -685,8 +842,12 @@ Backspace::
 		Backspace_base()
 	}
 
-Insert::
-	if(GetKeyState(numLeader))
+*Insert::
+	if(Modifiers("Insert", "{Insert}", "{Insert}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		Insert_numLeader()
 	}
@@ -707,8 +868,12 @@ Insert::
 		Insert_base()
 	}
 
-Home::
-	if(GetKeyState(numLeader))
+*Home::
+	if(Modifiers("Home", "{Home}", "{Home}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		Home_numLeader()
 	}
@@ -729,8 +894,12 @@ Home::
 		Home_base()
 	}
 
-PgUp::
-	if(GetKeyState(numLeader))
+*PgUp::
+	if(Modifiers("PgUp", "{PgUp}", "{PgUp}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		PgUp_numLeader()
 	}
@@ -756,8 +925,12 @@ PgUp::
 
 ; Top -----------------------------------------
 
-Tab::
-	if(GetKeyState(numLeader))
+*Tab::
+	if(Modifiers("Tab", "{Tab}", "{Tab}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		Tab_numLeader()
 	}
@@ -778,8 +951,12 @@ Tab::
 		Tab_base()
 	}
 
-q::
-	if(GetKeyState(numLeader))
+*q::
+	if(Modifiers("q", "{q}", "{!}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		q_numLeader()
 	}
@@ -800,8 +977,12 @@ q::
 		q_base()
 	}
 
-w::
-	if(GetKeyState(numLeader))
+*w::
+	if(Modifiers("w", "{w}", "{@}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		w_numLeader()
 	}
@@ -822,8 +1003,12 @@ w::
 		w_base()
 	}
 
-e::
-	if(GetKeyState(numLeader))
+*e::
+	if(Modifiers("e", "{e}", "{#}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		e_numLeader()
 	}
@@ -844,8 +1029,12 @@ e::
 		e_base()
 	}
 
-r::
-	if(GetKeyState(numLeader))
+*r::
+	if(Modifiers("r", "{r}", "{$}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		r_numLeader()
 	}
@@ -866,8 +1055,12 @@ r::
 		r_base()
 	}
 
-t::
-	if(GetKeyState(numLeader))
+*t::
+	if(Modifiers("t", "{t}", "{`%}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		t_numLeader()
 	}
@@ -888,8 +1081,12 @@ t::
 		t_base()
 	}
 
-y::
-	if(GetKeyState(numLeader))
+*y::
+	if(Modifiers("y", "{y}", "{^}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		y_numLeader()
 	}
@@ -910,8 +1107,12 @@ y::
 		y_base()
 	}
 
-u::
-	if(GetKeyState(numLeader))
+*u::
+	if(Modifiers("u", "{u}", "{&}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		u_numLeader()
 	}
@@ -932,8 +1133,12 @@ u::
 		u_base()
 	}
 
-i::
-	if(GetKeyState(numLeader))
+*i::
+	if(Modifiers("i", "{i}", "{*}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		i_numLeader()
 	}
@@ -954,8 +1159,12 @@ i::
 		i_base()
 	}
 
-o::
-	if(GetKeyState(numLeader))
+*o::
+	if(Modifiers("o", "{o}", "{(}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		o_numLeader()
 	}
@@ -976,8 +1185,12 @@ o::
 		o_base()
 	}
 
-p::
-	if(GetKeyState(numLeader))
+*p::
+	if(Modifiers("p", "{p}", "{)}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		p_numLeader()
 	}
@@ -998,8 +1211,12 @@ p::
 		p_base()
 	}
 
-opening_bracket::
-	if(GetKeyState(numLeader))
+*[::
+	if(Modifiers("opening_bracket", "{[}", "{-}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		opening_bracket_numLeader()
 	}
@@ -1020,8 +1237,12 @@ opening_bracket::
 		opening_bracket_base()
 	}
 
-closing_bracket::
-	if(GetKeyState(numLeader))
+*]::
+	if(Modifiers("closing_bracket", "{]}", "{=}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		closing_bracket_numLeader()
 	}
@@ -1042,8 +1263,12 @@ closing_bracket::
 		closing_bracket_base()
 	}
 
-backslash::
-	if(GetKeyState(numLeader))
+*\::
+	if(Modifiers("backslash", "{\}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		backslash_numLeader()
 	}
@@ -1064,8 +1289,12 @@ backslash::
 		backslash_base()
 	}
 
-Delete::
-	if(GetKeyState(numLeader))
+*Delete::
+	if(Modifiers("Delete", "{Delete}", "{Delete}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		Delete_numLeader()
 	}
@@ -1086,8 +1315,12 @@ Delete::
 		Delete_base()
 	}
 
-End::
-	if(GetKeyState(numLeader))
+*End::
+	if(Modifiers("End", "{End}", "{End}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		End_numLeader()
 	}
@@ -1108,8 +1341,12 @@ End::
 		End_base()
 	}
 
-PgDn::
-	if(GetKeyState(numLeader))
+*PgDn::
+	if(Modifiers("PgDn", "{PgDn}", "{PgDn}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		PgDn_numLeader()
 	}
@@ -1135,8 +1372,12 @@ PgDn::
 
 ; Home -----------------------------------------
 
-CapsLock::
-	if(GetKeyState(numLeader))
+*CapsLock::
+	if(Modifiers("CapsLock", "{CapsLock}", "{CapsLock}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		CapsLock_numLeader()
 	}
@@ -1157,30 +1398,38 @@ CapsLock::
 		CapsLock_base()
 	}
 
-a::
-	if(GetKeyState(numLeader))
+*a::
+	if(Modifiers("aa", "{a}", "{1}"))
 	{
-		a_numLeader()
+		return
+	}
+	else if(GetKeyState(numLeader))
+	{
+		aa_numLeader()
 	}
 	else if(numModifier)
 	{
-		a_numModifier()
+		aa_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		a_shiftLeader()
+		aa_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		a_shiftModifier()
+		aa_shiftModifier()
 	}
 	else
 	{
-		a_base()
+		aa_base()
 	}
 
-s::
-	if(GetKeyState(numLeader))
+*s::
+	if(Modifiers("s", "{s}", "{2}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		s_numLeader()
 	}
@@ -1201,8 +1450,12 @@ s::
 		s_base()
 	}
 
-d::
-	if(GetKeyState(numLeader))
+*d::
+	if(Modifiers("d", "{d}", "{3}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		d_numLeader()
 	}
@@ -1223,8 +1476,12 @@ d::
 		d_base()
 	}
 
-f::
-	if(GetKeyState(numLeader))
+*f::
+	if(Modifiers("f", "{f}", "{4}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		f_numLeader()
 	}
@@ -1245,8 +1502,12 @@ f::
 		f_base()
 	}
 
-g::
-	if(GetKeyState(numLeader))
+*g::
+	if(Modifiers("g", "{g}", "{5}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		g_numLeader()
 	}
@@ -1267,8 +1528,12 @@ g::
 		g_base()
 	}
 
-h::
-	if(GetKeyState(numLeader))
+*h::
+	if(Modifiers("h", "{h}", "{6}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		h_numLeader()
 	}
@@ -1289,8 +1554,12 @@ h::
 		h_base()
 	}
 
-j::
-	if(GetKeyState(numLeader))
+*j::
+	if(Modifiers("j", "{j}", "{7}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		j_numLeader()
 	}
@@ -1311,8 +1580,12 @@ j::
 		j_base()
 	}
 
-k::
-	if(GetKeyState(numLeader))
+*k::
+	if(Modifiers("k", "{k}", "{8}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		k_numLeader()
 	}
@@ -1333,8 +1606,12 @@ k::
 		k_base()
 	}
 
-l::
-	if(GetKeyState(numLeader))
+*l::
+	if(Modifiers("l", "{l}", "{9}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		l_numLeader()
 	}
@@ -1355,8 +1632,12 @@ l::
 		l_base()
 	}
 
-semicolon::
-	if(GetKeyState(numLeader))
+*`;::
+	if(Modifiers("semicolon", "{`;}", "{0}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		semicolon_numLeader()
 	}
@@ -1377,8 +1658,12 @@ semicolon::
 		semicolon_base()
 	}
 
-apostrophe::
-	if(GetKeyState(numLeader))
+*'::
+	if(Modifiers("apostrophe", "{'}", "{`}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		apostrophe_numLeader()
 	}
@@ -1399,8 +1684,12 @@ apostrophe::
 		apostrophe_base()
 	}
 
-Enter::
-	if(GetKeyState(numLeader))
+*Enter::
+	if(Modifiers("Enter", "{Enter}", "{Enter}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		Enter_numLeader()
 	}
@@ -1426,17 +1715,21 @@ Enter::
 
 ; Bottom -----------------------------------------
 
-LShift::
+*LShift::
 	dual.combine([], shiftLeaderDn, settings = false, {(shiftLeader): shiftLeaderUp})
 	shiftModifier := true
 	return
-LShift Up::
+*LShift Up::
 	dual.combine([], shiftLeaderDn, settings = false, {(shiftLeader): shiftLeaderUp})
 	shiftModifier := false
 	return
 
-z::
-	if(GetKeyState(numLeader))
+*z::
+	if(Modifiers("z", "{z}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		z_numLeader()
 	}
@@ -1457,8 +1750,12 @@ z::
 		z_base()
 	}
 
-x::
-	if(GetKeyState(numLeader))
+*x::
+	if(Modifiers("x", "{x}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		x_numLeader()
 	}
@@ -1479,8 +1776,12 @@ x::
 		x_base()
 	}
 
-c::
-	if(GetKeyState(numLeader))
+*c::
+	if(Modifiers("c", "{c}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		c_numLeader()
 	}
@@ -1501,8 +1802,12 @@ c::
 		c_base()
 	}
 
-v::
-	if(GetKeyState(numLeader))
+*v::
+	if(Modifiers("v", "{v}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		v_numLeader()
 	}
@@ -1523,8 +1828,12 @@ v::
 		v_base()
 	}
 
-b::
-	if(GetKeyState(numLeader))
+*b::
+	if(Modifiers("b", "{b}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		b_numLeader()
 	}
@@ -1545,8 +1854,12 @@ b::
 		b_base()
 	}
 
-n::
-	if(GetKeyState(numLeader))
+*n::
+	if(Modifiers("n", "{n}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		n_numLeader()
 	}
@@ -1567,8 +1880,12 @@ n::
 		n_base()
 	}
 
-m::
-	if(GetKeyState(numLeader))
+*m::
+	if(Modifiers("m", "{m}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		m_numLeader()
 	}
@@ -1589,8 +1906,12 @@ m::
 		m_base()
 	}
 
-comma::
-	if(GetKeyState(numLeader))
+*,::
+	if(Modifiers("comma", "{,}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		comma_numLeader()
 	}
@@ -1611,8 +1932,12 @@ comma::
 		comma_base()
 	}
 
-period::
-	if(GetKeyState(numLeader))
+*.::
+	if(Modifiers("period", "{.}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		period_numLeader()
 	}
@@ -1633,8 +1958,12 @@ period::
 		period_base()
 	}
 
-slash::
-	if(GetKeyState(numLeader))
+*/::
+	if(Modifiers("slash", "{/}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		slash_numLeader()
 	}
@@ -1655,17 +1984,21 @@ slash::
 		slash_base()
 	}
 
-RShift::
+*RShift::
 	dual.combine([], shiftLeaderDn, settings = false, {(shiftLeader): shiftLeaderUp})
 	shiftModifier := true
 	return
-RShift Up::
+*RShift Up::
 	dual.combine([], shiftLeaderDn, settings = false, {(shiftLeader): shiftLeaderUp})
 	shiftModifier := false
 	return
 
-Up::
-	if(GetKeyState(numLeader))
+*Up::
+	if(Modifiers("Up", "{Up}", "{Up}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		Up_numLeader()
 	}

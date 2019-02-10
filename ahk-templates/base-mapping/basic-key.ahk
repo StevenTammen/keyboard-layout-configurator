@@ -1,22 +1,26 @@
-﻿${key}::
-	if(GetKeyState(numLeader))
+﻿*${key}::
+	if(Modifiers("${cleaned_key}", "{${key}}", "{${num_key}}"))
 	{
-		${key}_numLeader()
+		return
+	}
+	else if(GetKeyState(numLeader))
+	{
+		${cleaned_key}_numLeader()
 	}
 	else if(numModifier)
 	{
-		${key}_numModifier()
+		${cleaned_key}_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		${key}_shiftLeader()
+		${cleaned_key}_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		${key}_shiftModifier()
+		${cleaned_key}_shiftModifier()
 	}
 	else
 	{
-		${key}_base()
+		${cleaned_key}_base()
 	}
 
