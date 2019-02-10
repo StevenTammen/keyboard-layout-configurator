@@ -202,7 +202,7 @@ r_numLeader()
 
 t_numLeader()
 {
-	SendInput {%}{%numLeaderUp%}
+	SendInput {`%}{%numLeaderUp%}
 }
 
 y_numLeader()

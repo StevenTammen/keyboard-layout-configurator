@@ -2,12 +2,33 @@
 SendMode Input
 #SingleInstance force
 
+; Import classes and functions -----------------------------------------
+
 #Include <dual/dual>
+#Include <modifiers>
+
 #Include <layers/numLeader>
 #Include <layers/numModifier>
 #Include <layers/shiftLeader>
 #Include <layers/shiftModifier>
 #Include <layers/base>
+
+#Include <layers/modifiers/Alt>
+#Include <layers/modifiers/AltShift>
+#Include <layers/modifiers/AltShiftWin>
+#Include <layers/modifiers/AltWin>
+#Include <layers/modifiers/Ctrl>
+#Include <layers/modifiers/CtrlAlt>
+#Include <layers/modifiers/CtrlAltShift>
+#Include <layers/modifiers/CtrlAltShiftWin>
+#Include <layers/modifiers/CtrlAltWin>
+#Include <layers/modifiers/CtrlShift>
+#Include <layers/modifiers/CtrlShiftWin>
+#Include <layers/modifiers/CtrlWin>
+#Include <layers/modifiers/ShiftWin>
+#Include <layers/modifiers/Win>
+
+; Create key aliases -----------------------------------------
 
 global shiftLeader := "VK8A"
 global ctrlLeader := "VK8B"
@@ -29,13 +50,19 @@ global ctrlModifier := false
 global altModifier := false
 global winModifier := false
 
-; Make dual object
+; Initalize objects -----------------------------------------
+
 dual := new Dual
+
 
 ; Function -----------------------------------------
 
 *Esc::
-	if(GetKeyState(numLeader))
+	if(Modifiers("Esc", "{Esc}", "{Esc}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		Esc_numLeader()
 	}
@@ -57,7 +84,11 @@ dual := new Dual
 	}
 
 *F1::
-	if(GetKeyState(numLeader))
+	if(Modifiers("F1", "{F1}", "{F1}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F1_numLeader()
 	}
@@ -79,7 +110,11 @@ dual := new Dual
 	}
 
 *F2::
-	if(GetKeyState(numLeader))
+	if(Modifiers("F2", "{F2}", "{F2}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F2_numLeader()
 	}
@@ -101,7 +136,11 @@ dual := new Dual
 	}
 
 *F3::
-	if(GetKeyState(numLeader))
+	if(Modifiers("F3", "{F3}", "{F3}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F3_numLeader()
 	}
@@ -123,7 +162,11 @@ dual := new Dual
 	}
 
 *F4::
-	if(GetKeyState(numLeader))
+	if(Modifiers("F4", "{F4}", "{F4}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F4_numLeader()
 	}
@@ -145,7 +188,11 @@ dual := new Dual
 	}
 
 *F5::
-	if(GetKeyState(numLeader))
+	if(Modifiers("F5", "{F5}", "{F5}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F5_numLeader()
 	}
@@ -167,7 +214,11 @@ dual := new Dual
 	}
 
 *F6::
-	if(GetKeyState(numLeader))
+	if(Modifiers("F6", "{F6}", "{F6}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F6_numLeader()
 	}
@@ -189,7 +240,11 @@ dual := new Dual
 	}
 
 *F7::
-	if(GetKeyState(numLeader))
+	if(Modifiers("F7", "{F7}", "{F7}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F7_numLeader()
 	}
@@ -211,7 +266,11 @@ dual := new Dual
 	}
 
 *F8::
-	if(GetKeyState(numLeader))
+	if(Modifiers("F8", "{F8}", "{F8}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F8_numLeader()
 	}
@@ -233,7 +292,11 @@ dual := new Dual
 	}
 
 *F9::
-	if(GetKeyState(numLeader))
+	if(Modifiers("F9", "{F9}", "{F9}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F9_numLeader()
 	}
@@ -255,7 +318,11 @@ dual := new Dual
 	}
 
 *F10::
-	if(GetKeyState(numLeader))
+	if(Modifiers("F10", "{F10}", "{F10}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F10_numLeader()
 	}
@@ -277,7 +344,11 @@ dual := new Dual
 	}
 
 *F11::
-	if(GetKeyState(numLeader))
+	if(Modifiers("F11", "{F11}", "{F11}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F11_numLeader()
 	}
@@ -299,7 +370,11 @@ dual := new Dual
 	}
 
 *F12::
-	if(GetKeyState(numLeader))
+	if(Modifiers("F12", "{F12}", "{F12}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		F12_numLeader()
 	}
@@ -321,7 +396,11 @@ dual := new Dual
 	}
 
 *PrintScreen::
-	if(GetKeyState(numLeader))
+	if(Modifiers("PrintScreen", "{PrintScreen}", "{PrintScreen}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		PrintScreen_numLeader()
 	}
@@ -343,7 +422,11 @@ dual := new Dual
 	}
 
 *ScrollLock::
-	if(GetKeyState(numLeader))
+	if(Modifiers("ScrollLock", "{ScrollLock}", "{ScrollLock}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		ScrollLock_numLeader()
 	}
@@ -365,7 +448,11 @@ dual := new Dual
 	}
 
 *Pause::
-	if(GetKeyState(numLeader))
+	if(Modifiers("Pause", "{Pause}", "{Pause}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		Pause_numLeader()
 	}
@@ -392,7 +479,11 @@ dual := new Dual
 ; Number -----------------------------------------
 
 *`::
-	if(GetKeyState(numLeader))
+	if(Modifiers("backtick", "{`}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		backtick_numLeader()
 	}
@@ -414,7 +505,11 @@ dual := new Dual
 	}
 
 *1::
-	if(GetKeyState(numLeader))
+	if(Modifiers("one", "{1}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		one_numLeader()
 	}
@@ -436,7 +531,11 @@ dual := new Dual
 	}
 
 *2::
-	if(GetKeyState(numLeader))
+	if(Modifiers("two", "{2}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		two_numLeader()
 	}
@@ -458,7 +557,11 @@ dual := new Dual
 	}
 
 *3::
-	if(GetKeyState(numLeader))
+	if(Modifiers("three", "{3}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		three_numLeader()
 	}
@@ -480,7 +583,11 @@ dual := new Dual
 	}
 
 *4::
-	if(GetKeyState(numLeader))
+	if(Modifiers("four", "{4}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		four_numLeader()
 	}
@@ -502,7 +609,11 @@ dual := new Dual
 	}
 
 *5::
-	if(GetKeyState(numLeader))
+	if(Modifiers("five", "{5}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		five_numLeader()
 	}
@@ -524,7 +635,11 @@ dual := new Dual
 	}
 
 *6::
-	if(GetKeyState(numLeader))
+	if(Modifiers("six", "{6}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		six_numLeader()
 	}
@@ -546,7 +661,11 @@ dual := new Dual
 	}
 
 *7::
-	if(GetKeyState(numLeader))
+	if(Modifiers("seven", "{7}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		seven_numLeader()
 	}
@@ -568,7 +687,11 @@ dual := new Dual
 	}
 
 *8::
-	if(GetKeyState(numLeader))
+	if(Modifiers("eight", "{8}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		eight_numLeader()
 	}
@@ -590,7 +713,11 @@ dual := new Dual
 	}
 
 *9::
-	if(GetKeyState(numLeader))
+	if(Modifiers("nine", "{9}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		nine_numLeader()
 	}
@@ -612,7 +739,11 @@ dual := new Dual
 	}
 
 *0::
-	if(GetKeyState(numLeader))
+	if(Modifiers("zero", "{0}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		zero_numLeader()
 	}
@@ -634,7 +765,11 @@ dual := new Dual
 	}
 
 *-::
-	if(GetKeyState(numLeader))
+	if(Modifiers("hyphen", "{-}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		hyphen_numLeader()
 	}
@@ -656,7 +791,11 @@ dual := new Dual
 	}
 
 *=::
-	if(GetKeyState(numLeader))
+	if(Modifiers("equals", "{=}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		equals_numLeader()
 	}
@@ -678,7 +817,11 @@ dual := new Dual
 	}
 
 *Backspace::
-	if(GetKeyState(numLeader))
+	if(Modifiers("Backspace", "{Backspace}", "{Backspace}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		Backspace_numLeader()
 	}
@@ -700,7 +843,11 @@ dual := new Dual
 	}
 
 *Insert::
-	if(GetKeyState(numLeader))
+	if(Modifiers("Insert", "{Insert}", "{Insert}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		Insert_numLeader()
 	}
@@ -722,7 +869,11 @@ dual := new Dual
 	}
 
 *Home::
-	if(GetKeyState(numLeader))
+	if(Modifiers("Home", "{Home}", "{Home}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		Home_numLeader()
 	}
@@ -744,7 +895,11 @@ dual := new Dual
 	}
 
 *PgUp::
-	if(GetKeyState(numLeader))
+	if(Modifiers("PgUp", "{PgUp}", "{PgUp}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		PgUp_numLeader()
 	}
@@ -771,7 +926,11 @@ dual := new Dual
 ; Top -----------------------------------------
 
 *Tab::
-	if(GetKeyState(numLeader))
+	if(Modifiers("Tab", "{Tab}", "{Tab}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		Tab_numLeader()
 	}
@@ -793,7 +952,11 @@ dual := new Dual
 	}
 
 *q::
-	if(GetKeyState(numLeader))
+	if(Modifiers("q", "{q}", "{!}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		q_numLeader()
 	}
@@ -815,7 +978,11 @@ dual := new Dual
 	}
 
 *w::
-	if(GetKeyState(numLeader))
+	if(Modifiers("w", "{w}", "{@}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		w_numLeader()
 	}
@@ -837,7 +1004,11 @@ dual := new Dual
 	}
 
 *e::
-	if(GetKeyState(numLeader))
+	if(Modifiers("e", "{e}", "{#}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		e_numLeader()
 	}
@@ -859,7 +1030,11 @@ dual := new Dual
 	}
 
 *r::
-	if(GetKeyState(numLeader))
+	if(Modifiers("r", "{r}", "{$}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		r_numLeader()
 	}
@@ -881,7 +1056,11 @@ dual := new Dual
 	}
 
 *t::
-	if(GetKeyState(numLeader))
+	if(Modifiers("t", "{t}", "{`%}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		t_numLeader()
 	}
@@ -903,7 +1082,11 @@ dual := new Dual
 	}
 
 *y::
-	if(GetKeyState(numLeader))
+	if(Modifiers("y", "{y}", "{^}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		y_numLeader()
 	}
@@ -925,7 +1108,11 @@ dual := new Dual
 	}
 
 *u::
-	if(GetKeyState(numLeader))
+	if(Modifiers("u", "{u}", "{&}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		u_numLeader()
 	}
@@ -947,7 +1134,11 @@ dual := new Dual
 	}
 
 *i::
-	if(GetKeyState(numLeader))
+	if(Modifiers("i", "{i}", "{*}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		i_numLeader()
 	}
@@ -969,7 +1160,11 @@ dual := new Dual
 	}
 
 *o::
-	if(GetKeyState(numLeader))
+	if(Modifiers("o", "{o}", "{(}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		o_numLeader()
 	}
@@ -991,7 +1186,11 @@ dual := new Dual
 	}
 
 *p::
-	if(GetKeyState(numLeader))
+	if(Modifiers("p", "{p}", "{)}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		p_numLeader()
 	}
@@ -1013,7 +1212,11 @@ dual := new Dual
 	}
 
 *[::
-	if(GetKeyState(numLeader))
+	if(Modifiers("opening_bracket", "{[}", "{-}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		opening_bracket_numLeader()
 	}
@@ -1035,7 +1238,11 @@ dual := new Dual
 	}
 
 *]::
-	if(GetKeyState(numLeader))
+	if(Modifiers("closing_bracket", "{]}", "{=}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		closing_bracket_numLeader()
 	}
@@ -1057,7 +1264,11 @@ dual := new Dual
 	}
 
 *\::
-	if(GetKeyState(numLeader))
+	if(Modifiers("backslash", "{\}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		backslash_numLeader()
 	}
@@ -1079,7 +1290,11 @@ dual := new Dual
 	}
 
 *Delete::
-	if(GetKeyState(numLeader))
+	if(Modifiers("Delete", "{Delete}", "{Delete}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		Delete_numLeader()
 	}
@@ -1101,7 +1316,11 @@ dual := new Dual
 	}
 
 *End::
-	if(GetKeyState(numLeader))
+	if(Modifiers("End", "{End}", "{End}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		End_numLeader()
 	}
@@ -1123,7 +1342,11 @@ dual := new Dual
 	}
 
 *PgDn::
-	if(GetKeyState(numLeader))
+	if(Modifiers("PgDn", "{PgDn}", "{PgDn}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		PgDn_numLeader()
 	}
@@ -1150,7 +1373,11 @@ dual := new Dual
 ; Home -----------------------------------------
 
 *CapsLock::
-	if(GetKeyState(numLeader))
+	if(Modifiers("CapsLock", "{CapsLock}", "{CapsLock}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		CapsLock_numLeader()
 	}
@@ -1172,7 +1399,11 @@ dual := new Dual
 	}
 
 *a::
-	if(GetKeyState(numLeader))
+	if(Modifiers("aa", "{a}", "{1}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		aa_numLeader()
 	}
@@ -1194,7 +1425,11 @@ dual := new Dual
 	}
 
 *s::
-	if(GetKeyState(numLeader))
+	if(Modifiers("s", "{s}", "{2}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		s_numLeader()
 	}
@@ -1216,7 +1451,11 @@ dual := new Dual
 	}
 
 *d::
-	if(GetKeyState(numLeader))
+	if(Modifiers("d", "{d}", "{3}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		d_numLeader()
 	}
@@ -1238,7 +1477,11 @@ dual := new Dual
 	}
 
 *f::
-	if(GetKeyState(numLeader))
+	if(Modifiers("f", "{f}", "{4}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		f_numLeader()
 	}
@@ -1260,7 +1503,11 @@ dual := new Dual
 	}
 
 *g::
-	if(GetKeyState(numLeader))
+	if(Modifiers("g", "{g}", "{5}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		g_numLeader()
 	}
@@ -1282,7 +1529,11 @@ dual := new Dual
 	}
 
 *h::
-	if(GetKeyState(numLeader))
+	if(Modifiers("h", "{h}", "{6}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		h_numLeader()
 	}
@@ -1304,7 +1555,11 @@ dual := new Dual
 	}
 
 *j::
-	if(GetKeyState(numLeader))
+	if(Modifiers("j", "{j}", "{7}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		j_numLeader()
 	}
@@ -1326,7 +1581,11 @@ dual := new Dual
 	}
 
 *k::
-	if(GetKeyState(numLeader))
+	if(Modifiers("k", "{k}", "{8}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		k_numLeader()
 	}
@@ -1348,7 +1607,11 @@ dual := new Dual
 	}
 
 *l::
-	if(GetKeyState(numLeader))
+	if(Modifiers("l", "{l}", "{9}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		l_numLeader()
 	}
@@ -1369,8 +1632,12 @@ dual := new Dual
 		l_base()
 	}
 
-*;::
-	if(GetKeyState(numLeader))
+*`;::
+	if(Modifiers("semicolon", "{`;}", "{0}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		semicolon_numLeader()
 	}
@@ -1392,7 +1659,11 @@ dual := new Dual
 	}
 
 *'::
-	if(GetKeyState(numLeader))
+	if(Modifiers("apostrophe", "{'}", "{`}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		apostrophe_numLeader()
 	}
@@ -1414,7 +1685,11 @@ dual := new Dual
 	}
 
 *Enter::
-	if(GetKeyState(numLeader))
+	if(Modifiers("Enter", "{Enter}", "{Enter}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		Enter_numLeader()
 	}
@@ -1440,17 +1715,21 @@ dual := new Dual
 
 ; Bottom -----------------------------------------
 
-LShift::
+*LShift::
 	dual.combine([], shiftLeaderDn, settings = false, {(shiftLeader): shiftLeaderUp})
 	shiftModifier := true
 	return
-LShift Up::
+*LShift Up::
 	dual.combine([], shiftLeaderDn, settings = false, {(shiftLeader): shiftLeaderUp})
 	shiftModifier := false
 	return
 
 *z::
-	if(GetKeyState(numLeader))
+	if(Modifiers("z", "{z}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		z_numLeader()
 	}
@@ -1472,7 +1751,11 @@ LShift Up::
 	}
 
 *x::
-	if(GetKeyState(numLeader))
+	if(Modifiers("x", "{x}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		x_numLeader()
 	}
@@ -1494,7 +1777,11 @@ LShift Up::
 	}
 
 *c::
-	if(GetKeyState(numLeader))
+	if(Modifiers("c", "{c}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		c_numLeader()
 	}
@@ -1516,7 +1803,11 @@ LShift Up::
 	}
 
 *v::
-	if(GetKeyState(numLeader))
+	if(Modifiers("v", "{v}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		v_numLeader()
 	}
@@ -1538,7 +1829,11 @@ LShift Up::
 	}
 
 *b::
-	if(GetKeyState(numLeader))
+	if(Modifiers("b", "{b}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		b_numLeader()
 	}
@@ -1560,7 +1855,11 @@ LShift Up::
 	}
 
 *n::
-	if(GetKeyState(numLeader))
+	if(Modifiers("n", "{n}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		n_numLeader()
 	}
@@ -1582,7 +1881,11 @@ LShift Up::
 	}
 
 *m::
-	if(GetKeyState(numLeader))
+	if(Modifiers("m", "{m}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		m_numLeader()
 	}
@@ -1604,7 +1907,11 @@ LShift Up::
 	}
 
 *,::
-	if(GetKeyState(numLeader))
+	if(Modifiers("comma", "{,}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		comma_numLeader()
 	}
@@ -1626,7 +1933,11 @@ LShift Up::
 	}
 
 *.::
-	if(GetKeyState(numLeader))
+	if(Modifiers("period", "{.}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		period_numLeader()
 	}
@@ -1648,7 +1959,11 @@ LShift Up::
 	}
 
 */::
-	if(GetKeyState(numLeader))
+	if(Modifiers("slash", "{/}", "{}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		slash_numLeader()
 	}
@@ -1669,17 +1984,21 @@ LShift Up::
 		slash_base()
 	}
 
-RShift::
+*RShift::
 	dual.combine([], shiftLeaderDn, settings = false, {(shiftLeader): shiftLeaderUp})
 	shiftModifier := true
 	return
-RShift Up::
+*RShift Up::
 	dual.combine([], shiftLeaderDn, settings = false, {(shiftLeader): shiftLeaderUp})
 	shiftModifier := false
 	return
 
 *Up::
-	if(GetKeyState(numLeader))
+	if(Modifiers("Up", "{Up}", "{Up}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		Up_numLeader()
 	}

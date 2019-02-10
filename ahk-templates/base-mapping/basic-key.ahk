@@ -1,5 +1,9 @@
 ﻿*${key}::
-	if(GetKeyState(numLeader))
+	if(Modifiers("${cleaned_key}", "{${key}}", "{${num_key}}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
 	{
 		${cleaned_key}_numLeader()
 	}

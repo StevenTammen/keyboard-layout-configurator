@@ -202,7 +202,7 @@ r_numModifier()
 
 t_numModifier()
 {
-	SendInput {%}
+	SendInput {`%}
 }
 
 y_numModifier()

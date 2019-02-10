@@ -9,28 +9,28 @@ def create_mapping(keymap):
 
 	remap = open("layout/remap.ahk", "w")
 
-	num_leader = open("layout/layers/numLeader.ahk", "w")
-	num_modifier = open("layout/layers/numModifier.ahk", "w")
-	shift_leader = open("layout/layers/shiftLeader.ahk", "w")
-	shift_modifier = open("layout/layers/shiftModifier.ahk", "w")
-	base = open("layout/layers/base.ahk", "w")
+	num_leader = open("layout/Lib/layers/numLeader.ahk", "w")
+	num_modifier = open("layout/Lib/layers/numModifier.ahk", "w")
+	shift_leader = open("layout/Lib/layers/shiftLeader.ahk", "w")
+	shift_modifier = open("layout/Lib/layers/shiftModifier.ahk", "w")
+	base = open("layout/Lib/layers/base.ahk", "w")
 
-	alt = open("layout/layers/modifiers/Alt.ahk", "w")
-	alt_shift = open("layout/layers/modifiers/AltShift.ahk", "w")
-	alt_shift_win = open("layout/layers/modifiers/AltShiftWin.ahk", "w")
-	alt_win = open("layout/layers/modifiers/AltWin.ahk", "w")
+	alt = open("layout/Lib/layers/modifiers/Alt.ahk", "w")
+	alt_shift = open("layout/Lib/layers/modifiers/AltShift.ahk", "w")
+	alt_shift_win = open("layout/Lib/layers/modifiers/AltShiftWin.ahk", "w")
+	alt_win = open("layout/Lib/layers/modifiers/AltWin.ahk", "w")
 
-	ctrl = open("layout/layers/modifiers/Ctrl.ahk", "w")
-	ctrl_alt = open("layout/layers/modifiers/CtrlAlt.ahk", "w")
-	ctrl_alt_shift = open("layout/layers/modifiers/CtrlAltShift.ahk", "w")
-	ctrl_alt_shift_win = open("layout/layers/modifiers/CtrlAltShiftWin.ahk", "w")
-	ctrl_alt_win = open("layout/layers/modifiers/CtrlAltWin.ahk", "w")
-	ctrl_shift = open("layout/layers/modifiers/CtrlShift.ahk", "w")
-	ctrl_shift_win = open("layout/layers/modifiers/CtrlShiftWin.ahk", "w")
-	ctrl_win = open("layout/layers/modifiers/CtrlWin.ahk", "w")
+	ctrl = open("layout/Lib/layers/modifiers/Ctrl.ahk", "w")
+	ctrl_alt = open("layout/Lib/layers/modifiers/CtrlAlt.ahk", "w")
+	ctrl_alt_shift = open("layout/Lib/layers/modifiers/CtrlAltShift.ahk", "w")
+	ctrl_alt_shift_win = open("layout/Lib/layers/modifiers/CtrlAltShiftWin.ahk", "w")
+	ctrl_alt_win = open("layout/Lib/layers/modifiers/CtrlAltWin.ahk", "w")
+	ctrl_shift = open("layout/Lib/layers/modifiers/CtrlShift.ahk", "w")
+	ctrl_shift_win = open("layout/Lib/layers/modifiers/CtrlShiftWin.ahk", "w")
+	ctrl_win = open("layout/Lib/layers/modifiers/CtrlWin.ahk", "w")
 
-	shift_win = open("layout/layers/modifiers/ShiftWin.ahk", "w")
-	win = open("layout/layers/modifiers/Win.ahk", "w")
+	shift_win = open("layout/Lib/layers/modifiers/ShiftWin.ahk", "w")
+	win = open("layout/Lib/layers/modifiers/Win.ahk", "w")
 
 	files = \
 		[
@@ -68,13 +68,13 @@ def create_mapping(keymap):
 		row = keymap[row_name]
 		for position in row:
 
-			key = position['key']
-			cleaned_key = clean(key)
-			num_key = position['num']
-			shift_key = position['shift']
-			base_key = position['base']
+			key = escape_for_autohotkey(position['key'])
+			cleaned_key = to_text(position['key'])
+			num_key = escape_for_autohotkey(position['num'])
+			shift_key = escape_for_autohotkey(position['shift'])
+			base_key = escape_for_autohotkey(position['base'])
 
-			add_to_remap(remap, key, cleaned_key)
+			add_to_remap(remap, key, cleaned_key, num_key)
 			add_to_num(num_leader, num_modifier, cleaned_key, num_key)
 			add_to_shift(shift_leader, shift_modifier, cleaned_key, shift_key)
 			add_to_base(base, cleaned_key, base_key)
@@ -106,7 +106,7 @@ def close_files(files):
 		file.close()
 
 
-def add_to_remap(remap, key, cleaned_key):
+def add_to_remap(remap, key, cleaned_key, num_key):
 	"""
 	Adds a key to the remapping script
 
@@ -133,7 +133,8 @@ def add_to_remap(remap, key, cleaned_key):
 	else:
 		basic_key_vars = {
 			'key': key,
-			'cleaned_key': cleaned_key
+			'cleaned_key': cleaned_key,
+			'num_key': num_key
 		}
 		basic_key = basic_key_template.render(**basic_key_vars)
 		remap.write(basic_key)
@@ -231,7 +232,29 @@ def add_to_modifiers(modifier_files, cleaned_key):
 		modifier_files[modifier_combo].write(modifier_key)
 
 
-def clean(key):
+def escape_for_autohotkey(key):
+	"""
+	Uses ` to escape the input key, as necessary, for use in AutoHotkey.
+	Keys that need to be escaped can be found at the following link:
+
+	https://autohotkey.com/docs/commands/_EscapeChar.htm
+
+	:param key:
+	:return:
+	"""
+	# if key == ",":
+	#	return "`,"
+	if key == "%":
+		return "`%"
+	# elif key == "`":
+	#	return "``"
+	elif key == ";":
+		return "`;"
+	else:
+		return key
+
+
+def to_text(key):
 	"""
 	Cleans up the input key to allow it to be used as a function prefix.
 
