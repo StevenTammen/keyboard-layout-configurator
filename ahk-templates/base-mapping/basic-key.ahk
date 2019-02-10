@@ -23,4 +23,5 @@
 	{
 		${cleaned_key}_base()
 	}
+	return
 

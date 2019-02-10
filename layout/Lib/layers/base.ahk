@@ -2,82 +2,82 @@
 
 Esc_base()
 {
-	SendInput { }
+	SendInput {Esc}
 }
 
 F1_base()
 {
-	SendInput { }
+	SendInput {F1}
 }
 
 F2_base()
 {
-	SendInput { }
+	SendInput {F2}
 }
 
 F3_base()
 {
-	SendInput { }
+	SendInput {F3}
 }
 
 F4_base()
 {
-	SendInput { }
+	SendInput {F4}
 }
 
 F5_base()
 {
-	SendInput { }
+	SendInput {F5}
 }
 
 F6_base()
 {
-	SendInput { }
+	SendInput {F6}
 }
 
 F7_base()
 {
-	SendInput { }
+	SendInput {F7}
 }
 
 F8_base()
 {
-	SendInput { }
+	SendInput {F8}
 }
 
 F9_base()
 {
-	SendInput { }
+	SendInput {F9}
 }
 
 F10_base()
 {
-	SendInput { }
+	SendInput {F10}
 }
 
 F11_base()
 {
-	SendInput { }
+	SendInput {F11}
 }
 
 F12_base()
 {
-	SendInput { }
+	SendInput {F12}
 }
 
 PrintScreen_base()
 {
-	SendInput { }
+	SendInput {PrintScreen}
 }
 
 ScrollLock_base()
 {
-	SendInput { }
+	SendInput {ScrollLock}
 }
 
 Pause_base()
 {
-	SendInput { }
+	SendInput {Pause}
 }
 
 
@@ -87,87 +87,87 @@ Pause_base()
 
 backtick_base()
 {
-	SendInput { }
+	SendInput {`}
 }
 
 one_base()
 {
-	SendInput { }
+	SendInput {1}
 }
 
 two_base()
 {
-	SendInput { }
+	SendInput {2}
 }
 
 three_base()
 {
-	SendInput { }
+	SendInput {3}
 }
 
 four_base()
 {
-	SendInput { }
+	SendInput {4}
 }
 
 five_base()
 {
-	SendInput { }
+	SendInput {5}
 }
 
 six_base()
 {
-	SendInput { }
+	SendInput {6}
 }
 
 seven_base()
 {
-	SendInput { }
+	SendInput {7}
 }
 
 eight_base()
 {
-	SendInput { }
+	SendInput {8}
 }
 
 nine_base()
 {
-	SendInput { }
+	SendInput {9}
 }
 
 zero_base()
 {
-	SendInput { }
+	SendInput {0}
 }
 
 hyphen_base()
 {
-	SendInput { }
+	SendInput {-}
 }
 
 equals_base()
 {
-	SendInput { }
+	SendInput {=}
 }
 
 Backspace_base()
 {
-	SendInput { }
+	SendInput {Backspace}
 }
 
 Insert_base()
 {
-	SendInput { }
+	SendInput {Insert}
 }
 
 Home_base()
 {
-	SendInput { }
+	SendInput {Home}
 }
 
 PgUp_base()
 {
-	SendInput { }
+	SendInput {PgUp}
 }
 
 
@@ -177,87 +177,87 @@ PgUp_base()
 
 Tab_base()
 {
-	SendInput { }
+	SendInput {Tab}
 }
 
 q_base()
 {
-	SendInput { }
+	SendInput {q}
 }
 
 w_base()
 {
-	SendInput { }
+	SendInput {w}
 }
 
 e_base()
 {
-	SendInput { }
+	SendInput {e}
 }
 
 r_base()
 {
-	SendInput { }
+	SendInput {r}
 }
 
 t_base()
 {
-	SendInput { }
+	SendInput {t}
 }
 
 y_base()
 {
-	SendInput { }
+	SendInput {y}
 }
 
 u_base()
 {
-	SendInput { }
+	SendInput {u}
 }
 
 i_base()
 {
-	SendInput { }
+	SendInput {i}
 }
 
 o_base()
 {
-	SendInput { }
+	SendInput {o}
 }
 
 p_base()
 {
-	SendInput { }
+	SendInput {p}
 }
 
 opening_bracket_base()
 {
-	SendInput { }
+	SendInput {[}
 }
 
 closing_bracket_base()
 {
-	SendInput { }
+	SendInput {]}
 }
 
 backslash_base()
 {
-	SendInput { }
+	SendInput {\}
 }
 
 Delete_base()
 {
-	SendInput { }
+	SendInput {Delete}
 }
 
 End_base()
 {
-	SendInput { }
+	SendInput {End}
 }
 
 PgDn_base()
 {
-	SendInput { }
+	SendInput {PgDn}
 }
 
 
@@ -267,67 +267,67 @@ PgDn_base()
 
 CapsLock_base()
 {
-	SendInput { }
+	SendInput {CapsLock}
 }
 
 aa_base()
 {
-	SendInput { }
+	SendInput {a}
 }
 
 s_base()
 {
-	SendInput { }
+	SendInput {s}
 }
 
 d_base()
 {
-	SendInput { }
+	SendInput {d}
 }
 
 f_base()
 {
-	SendInput { }
+	SendInput {f}
 }
 
 g_base()
 {
-	SendInput { }
+	SendInput {g}
 }
 
 h_base()
 {
-	SendInput { }
+	SendInput {h}
 }
 
 j_base()
 {
-	SendInput { }
+	SendInput {j}
 }
 
 k_base()
 {
-	SendInput { }
+	SendInput {k}
 }
 
 l_base()
 {
-	SendInput { }
+	SendInput {l}
 }
 
 semicolon_base()
 {
-	SendInput { }
+	SendInput {`;}
 }
 
 apostrophe_base()
 {
-	SendInput { }
+	SendInput {'}
 }
 
 Enter_base()
 {
-	SendInput { }
+	SendInput {Enter}
 }
 
 
@@ -337,67 +337,127 @@ Enter_base()
 
 LShift_base()
 {
-	SendInput { }
+	SendInput {LShift}
 }
 
 z_base()
 {
-	SendInput { }
+	SendInput {z}
 }
 
 x_base()
 {
-	SendInput { }
+	SendInput {x}
 }
 
 c_base()
 {
-	SendInput { }
+	SendInput {c}
 }
 
 v_base()
 {
-	SendInput { }
+	SendInput {v}
 }
 
 b_base()
 {
-	SendInput { }
+	SendInput {b}
 }
 
 n_base()
 {
-	SendInput { }
+	SendInput {n}
 }
 
 m_base()
 {
-	SendInput { }
+	SendInput {m}
 }
 
 comma_base()
 {
-	SendInput { }
+	SendInput {,}
 }
 
 period_base()
 {
-	SendInput { }
+	SendInput {.}
 }
 
 slash_base()
 {
-	SendInput { }
+	SendInput {/}
 }
 
 RShift_base()
 {
-	SendInput { }
+	SendInput {RShift}
 }
 
 Up_base()
 {
-	SendInput { }
+	SendInput {Up}
+}
+
+
+
+
+; Modifier -----------------------------------------
+
+LCtrl_base()
+{
+	SendInput {LCtrl}
+}
+
+LWin_base()
+{
+	SendInput {LWin}
+}
+
+LAlt_base()
+{
+	SendInput {LAlt}
+}
+
+Space_base()
+{
+	SendInput {Space}
+}
+
+RAlt_base()
+{
+	SendInput {RAlt}
+}
+
+RWin_base()
+{
+	SendInput {RWin}
+}
+
+AppsKey_base()
+{
+	SendInput {AppsKey}
+}
+
+RCtrl_base()
+{
+	SendInput {RCtrl}
+}
+
+Left_base()
+{
+	SendInput {Left}
+}
+
+Down_base()
+{
+	SendInput {Down}
+}
+
+Right_base()
+{
+	SendInput {Right}
 }
 
 

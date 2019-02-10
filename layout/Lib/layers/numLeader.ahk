@@ -267,7 +267,7 @@ PgDn_numLeader()
 
 CapsLock_numLeader()
 {
-	SendInput {CapsLock}{%numLeaderUp%}
+	SendInput {}{%numLeaderUp%}
 }
 
 aa_numLeader()
@@ -398,6 +398,66 @@ RShift_numLeader()
 Up_numLeader()
 {
 	SendInput {Up}{%numLeaderUp%}
+}
+
+
+
+
+; Modifier -----------------------------------------
+
+LCtrl_numLeader()
+{
+	SendInput {LCtrl}{%numLeaderUp%}
+}
+
+LWin_numLeader()
+{
+	SendInput {LWin}{%numLeaderUp%}
+}
+
+LAlt_numLeader()
+{
+	SendInput {LAlt}{%numLeaderUp%}
+}
+
+Space_numLeader()
+{
+	SendInput {Space}{%numLeaderUp%}
+}
+
+RAlt_numLeader()
+{
+	SendInput {RAlt}{%numLeaderUp%}
+}
+
+RWin_numLeader()
+{
+	SendInput {RWin}{%numLeaderUp%}
+}
+
+AppsKey_numLeader()
+{
+	SendInput {AppsKey}{%numLeaderUp%}
+}
+
+RCtrl_numLeader()
+{
+	SendInput {RCtrl}{%numLeaderUp%}
+}
+
+Left_numLeader()
+{
+	SendInput {Left}{%numLeaderUp%}
+}
+
+Down_numLeader()
+{
+	SendInput {Down}{%numLeaderUp%}
+}
+
+Right_numLeader()
+{
+	SendInput {Right}{%numLeaderUp%}
 }
 
 

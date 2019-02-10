@@ -337,7 +337,7 @@ Enter_shiftLeader()
 
 LShift_shiftLeader()
 {
-	SendInput {LShift}{%shiftLeaderUp%}
+	SendInput {}{%shiftLeaderUp%}
 }
 
 z_shiftLeader()
@@ -392,12 +392,72 @@ slash_shiftLeader()
 
 RShift_shiftLeader()
 {
-	SendInput {RShift}{%shiftLeaderUp%}
+	SendInput {}{%shiftLeaderUp%}
 }
 
 Up_shiftLeader()
 {
 	SendInput {Up}{%shiftLeaderUp%}
+}
+
+
+
+
+; Modifier -----------------------------------------
+
+LCtrl_shiftLeader()
+{
+	SendInput {LCtrl}{%shiftLeaderUp%}
+}
+
+LWin_shiftLeader()
+{
+	SendInput {LWin}{%shiftLeaderUp%}
+}
+
+LAlt_shiftLeader()
+{
+	SendInput {LAlt}{%shiftLeaderUp%}
+}
+
+Space_shiftLeader()
+{
+	SendInput {Space}{%shiftLeaderUp%}
+}
+
+RAlt_shiftLeader()
+{
+	SendInput {RAlt}{%shiftLeaderUp%}
+}
+
+RWin_shiftLeader()
+{
+	SendInput {RWin}{%shiftLeaderUp%}
+}
+
+AppsKey_shiftLeader()
+{
+	SendInput {AppsKey}{%shiftLeaderUp%}
+}
+
+RCtrl_shiftLeader()
+{
+	SendInput {RCtrl}{%shiftLeaderUp%}
+}
+
+Left_shiftLeader()
+{
+	SendInput {Left}{%shiftLeaderUp%}
+}
+
+Down_shiftLeader()
+{
+	SendInput {Down}{%shiftLeaderUp%}
+}
+
+Right_shiftLeader()
+{
+	SendInput {Right}{%shiftLeaderUp%}
 }
 
 

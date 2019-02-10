@@ -267,7 +267,7 @@ PgDn_numModifier()
 
 CapsLock_numModifier()
 {
-	SendInput {CapsLock}
+	SendInput {}
 }
 
 aa_numModifier()
@@ -398,6 +398,66 @@ RShift_numModifier()
 Up_numModifier()
 {
 	SendInput {Up}
+}
+
+
+
+
+; Modifier -----------------------------------------
+
+LCtrl_numModifier()
+{
+	SendInput {LCtrl}
+}
+
+LWin_numModifier()
+{
+	SendInput {LWin}
+}
+
+LAlt_numModifier()
+{
+	SendInput {LAlt}
+}
+
+Space_numModifier()
+{
+	SendInput {Space}
+}
+
+RAlt_numModifier()
+{
+	SendInput {RAlt}
+}
+
+RWin_numModifier()
+{
+	SendInput {RWin}
+}
+
+AppsKey_numModifier()
+{
+	SendInput {AppsKey}
+}
+
+RCtrl_numModifier()
+{
+	SendInput {RCtrl}
+}
+
+Left_numModifier()
+{
+	SendInput {Left}
+}
+
+Down_numModifier()
+{
+	SendInput {Down}
+}
+
+Right_numModifier()
+{
+	SendInput {Right}
 }
 
 

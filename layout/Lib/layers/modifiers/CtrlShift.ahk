@@ -327,3 +327,52 @@ Up_CtrlShift(key) {
 
 
 
+; Modifier -----------------------------------------
+
+LCtrl_CtrlShift(key) {
+	SendInput ^+%key%
+}
+
+LWin_CtrlShift(key) {
+	SendInput ^+%key%
+}
+
+LAlt_CtrlShift(key) {
+	SendInput ^+%key%
+}
+
+Space_CtrlShift(key) {
+	SendInput ^+%key%
+}
+
+RAlt_CtrlShift(key) {
+	SendInput ^+%key%
+}
+
+RWin_CtrlShift(key) {
+	SendInput ^+%key%
+}
+
+AppsKey_CtrlShift(key) {
+	SendInput ^+%key%
+}
+
+RCtrl_CtrlShift(key) {
+	SendInput ^+%key%
+}
+
+Left_CtrlShift(key) {
+	SendInput ^+%key%
+}
+
+Down_CtrlShift(key) {
+	SendInput ^+%key%
+}
+
+Right_CtrlShift(key) {
+	SendInput ^+%key%
+}
+
+
+
+

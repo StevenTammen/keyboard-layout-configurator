@@ -327,3 +327,52 @@ Up_AltShift(key) {
 
 
 
+; Modifier -----------------------------------------
+
+LCtrl_AltShift(key) {
+	SendInput !+%key%
+}
+
+LWin_AltShift(key) {
+	SendInput !+%key%
+}
+
+LAlt_AltShift(key) {
+	SendInput !+%key%
+}
+
+Space_AltShift(key) {
+	SendInput !+%key%
+}
+
+RAlt_AltShift(key) {
+	SendInput !+%key%
+}
+
+RWin_AltShift(key) {
+	SendInput !+%key%
+}
+
+AppsKey_AltShift(key) {
+	SendInput !+%key%
+}
+
+RCtrl_AltShift(key) {
+	SendInput !+%key%
+}
+
+Left_AltShift(key) {
+	SendInput !+%key%
+}
+
+Down_AltShift(key) {
+	SendInput !+%key%
+}
+
+Right_AltShift(key) {
+	SendInput !+%key%
+}
+
+
+
+
