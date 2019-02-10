@@ -1,536 +1,536 @@
 {
-    "Bottom": [
+    "Function": [
         {
-            "shift": "",
-            "base": "LShift",
-            "num": "LShift",
-            "key": "LShift"
+            "key": "Esc",
+            "shift": "Esc",
+            "num": "Esc",
+            "base": "Esc"
         },
         {
-            "shift": "Z",
-            "base": "z",
-            "num": "",
-            "key": "z"
+            "key": "F1",
+            "shift": "F1",
+            "num": "F1",
+            "base": "F1"
         },
         {
-            "shift": "X",
-            "base": "x",
-            "num": "",
-            "key": "x"
+            "key": "F2",
+            "shift": "F2",
+            "num": "F2",
+            "base": "F2"
         },
         {
-            "shift": "C",
-            "base": "c",
-            "num": "",
-            "key": "c"
+            "key": "F3",
+            "shift": "F3",
+            "num": "F3",
+            "base": "F3"
         },
         {
-            "shift": "V",
-            "base": "v",
-            "num": "",
-            "key": "v"
+            "key": "F4",
+            "shift": "F4",
+            "num": "F4",
+            "base": "F4"
         },
         {
-            "shift": "B",
-            "base": "b",
-            "num": "",
-            "key": "b"
+            "key": "F5",
+            "shift": "F5",
+            "num": "F5",
+            "base": "F5"
         },
         {
-            "shift": "N",
-            "base": "n",
-            "num": "",
-            "key": "n"
+            "key": "F6",
+            "shift": "F6",
+            "num": "F6",
+            "base": "F6"
         },
         {
-            "shift": "M",
-            "base": "m",
-            "num": "",
-            "key": "m"
+            "key": "F7",
+            "shift": "F7",
+            "num": "F7",
+            "base": "F7"
         },
         {
-            "shift": "<",
-            "base": ",",
-            "num": "",
-            "key": ","
+            "key": "F8",
+            "shift": "F8",
+            "num": "F8",
+            "base": "F8"
         },
         {
-            "shift": ">",
-            "base": ".",
-            "num": "",
-            "key": "."
+            "key": "F9",
+            "shift": "F9",
+            "num": "F9",
+            "base": "F9"
         },
         {
-            "shift": "?",
-            "base": "/",
-            "num": "",
-            "key": "/"
+            "key": "F10",
+            "shift": "F10",
+            "num": "F10",
+            "base": "F10"
         },
         {
-            "shift": "",
-            "base": "RShift",
-            "num": "RShift",
-            "key": "RShift"
+            "key": "F11",
+            "shift": "F11",
+            "num": "F11",
+            "base": "F11"
         },
         {
-            "shift": "Up",
-            "base": "Up",
-            "num": "Up",
-            "key": "Up"
+            "key": "F12",
+            "shift": "F12",
+            "num": "F12",
+            "base": "F12"
+        },
+        {
+            "key": "PrintScreen",
+            "shift": "PrintScreen",
+            "num": "PrintScreen",
+            "base": "PrintScreen"
+        },
+        {
+            "key": "ScrollLock",
+            "shift": "ScrollLock",
+            "num": "ScrollLock",
+            "base": "ScrollLock"
+        },
+        {
+            "key": "Pause",
+            "shift": "Pause",
+            "num": "Pause",
+            "base": "Pause"
         }
     ],
     "Number": [
         {
+            "key": "`",
             "shift": "",
-            "base": "`",
             "num": "",
-            "key": "`"
+            "base": "`"
         },
         {
+            "key": "1",
             "shift": "",
-            "base": "1",
             "num": "",
-            "key": "1"
+            "base": "1"
         },
         {
+            "key": "2",
             "shift": "",
-            "base": "2",
             "num": "",
-            "key": "2"
+            "base": "2"
         },
         {
+            "key": "3",
             "shift": "",
-            "base": "3",
             "num": "",
-            "key": "3"
+            "base": "3"
         },
         {
+            "key": "4",
             "shift": "",
-            "base": "4",
             "num": "",
-            "key": "4"
+            "base": "4"
         },
         {
+            "key": "5",
             "shift": "",
-            "base": "5",
             "num": "",
-            "key": "5"
+            "base": "5"
         },
         {
+            "key": "6",
             "shift": "",
-            "base": "6",
             "num": "",
-            "key": "6"
+            "base": "6"
         },
         {
+            "key": "7",
             "shift": "",
-            "base": "7",
             "num": "",
-            "key": "7"
+            "base": "7"
         },
         {
+            "key": "8",
             "shift": "",
-            "base": "8",
             "num": "",
-            "key": "8"
+            "base": "8"
         },
         {
+            "key": "9",
             "shift": "",
-            "base": "9",
             "num": "",
-            "key": "9"
+            "base": "9"
         },
         {
+            "key": "0",
             "shift": "",
-            "base": "0",
             "num": "",
-            "key": "0"
+            "base": "0"
         },
         {
+            "key": "-",
             "shift": "",
-            "base": "-",
             "num": "",
-            "key": "-"
+            "base": "-"
         },
         {
+            "key": "=",
             "shift": "",
-            "base": "=",
             "num": "",
-            "key": "="
+            "base": "="
         },
         {
+            "key": "Backspace",
             "shift": "Backspace",
-            "base": "Backspace",
             "num": "Backspace",
-            "key": "Backspace"
+            "base": "Backspace"
         },
         {
+            "key": "Insert",
             "shift": "Insert",
-            "base": "Insert",
             "num": "Insert",
-            "key": "Insert"
+            "base": "Insert"
         },
         {
+            "key": "Home",
             "shift": "Home",
-            "base": "Home",
             "num": "Home",
-            "key": "Home"
+            "base": "Home"
         },
         {
+            "key": "PgUp",
             "shift": "PgUp",
-            "base": "PgUp",
             "num": "PgUp",
-            "key": "PgUp"
+            "base": "PgUp"
         }
     ],
     "Top": [
         {
+            "key": "Tab",
             "shift": "Tab",
-            "base": "Tab",
             "num": "Tab",
-            "key": "Tab"
+            "base": "Tab"
         },
         {
+            "key": "q",
             "shift": "Q",
-            "base": "q",
             "num": "!",
-            "key": "q"
+            "base": "q"
         },
         {
+            "key": "w",
             "shift": "W",
-            "base": "w",
             "num": "@",
-            "key": "w"
+            "base": "w"
         },
         {
+            "key": "e",
             "shift": "E",
-            "base": "e",
             "num": "#",
-            "key": "e"
+            "base": "e"
         },
         {
+            "key": "r",
             "shift": "R",
-            "base": "r",
             "num": "$",
-            "key": "r"
+            "base": "r"
         },
         {
+            "key": "t",
             "shift": "T",
-            "base": "t",
             "num": "%",
-            "key": "t"
+            "base": "t"
         },
         {
+            "key": "y",
             "shift": "Y",
-            "base": "y",
             "num": "^",
-            "key": "y"
+            "base": "y"
         },
         {
+            "key": "u",
             "shift": "U",
-            "base": "u",
             "num": "&",
-            "key": "u"
+            "base": "u"
         },
         {
+            "key": "i",
             "shift": "I",
-            "base": "i",
             "num": "*",
-            "key": "i"
+            "base": "i"
         },
         {
+            "key": "o",
             "shift": "O",
-            "base": "o",
             "num": "(",
-            "key": "o"
+            "base": "o"
         },
         {
+            "key": "p",
             "shift": "P",
-            "base": "p",
             "num": ")",
-            "key": "p"
+            "base": "p"
         },
         {
+            "key": "[",
             "shift": "{",
-            "base": "[",
             "num": "-",
-            "key": "["
+            "base": "["
         },
         {
+            "key": "]",
             "shift": "}",
-            "base": "]",
             "num": "=",
-            "key": "]"
+            "base": "]"
         },
         {
+            "key": "\\",
             "shift": "|",
-            "base": "\\",
             "num": "",
-            "key": "\\"
+            "base": "\\"
         },
         {
+            "key": "Delete",
             "shift": "Delete",
-            "base": "Delete",
             "num": "Delete",
-            "key": "Delete"
+            "base": "Delete"
         },
         {
+            "key": "End",
             "shift": "End",
-            "base": "End",
             "num": "End",
-            "key": "End"
+            "base": "End"
         },
         {
+            "key": "PgDn",
             "shift": "PgDn",
-            "base": "PgDn",
             "num": "PgDn",
-            "key": "PgDn"
-        }
-    ],
-    "Function": [
-        {
-            "shift": "Esc",
-            "base": "Esc",
-            "num": "Esc",
-            "key": "Esc"
-        },
-        {
-            "shift": "F1",
-            "base": "F1",
-            "num": "F1",
-            "key": "F1"
-        },
-        {
-            "shift": "F2",
-            "base": "F2",
-            "num": "F2",
-            "key": "F2"
-        },
-        {
-            "shift": "F3",
-            "base": "F3",
-            "num": "F3",
-            "key": "F3"
-        },
-        {
-            "shift": "F4",
-            "base": "F4",
-            "num": "F4",
-            "key": "F4"
-        },
-        {
-            "shift": "F5",
-            "base": "F5",
-            "num": "F5",
-            "key": "F5"
-        },
-        {
-            "shift": "F6",
-            "base": "F6",
-            "num": "F6",
-            "key": "F6"
-        },
-        {
-            "shift": "F7",
-            "base": "F7",
-            "num": "F7",
-            "key": "F7"
-        },
-        {
-            "shift": "F8",
-            "base": "F8",
-            "num": "F8",
-            "key": "F8"
-        },
-        {
-            "shift": "F9",
-            "base": "F9",
-            "num": "F9",
-            "key": "F9"
-        },
-        {
-            "shift": "F10",
-            "base": "F10",
-            "num": "F10",
-            "key": "F10"
-        },
-        {
-            "shift": "F11",
-            "base": "F11",
-            "num": "F11",
-            "key": "F11"
-        },
-        {
-            "shift": "F12",
-            "base": "F12",
-            "num": "F12",
-            "key": "F12"
-        },
-        {
-            "shift": "PrintScreen",
-            "base": "PrintScreen",
-            "num": "PrintScreen",
-            "key": "PrintScreen"
-        },
-        {
-            "shift": "ScrollLock",
-            "base": "ScrollLock",
-            "num": "ScrollLock",
-            "key": "ScrollLock"
-        },
-        {
-            "shift": "Pause",
-            "base": "Pause",
-            "num": "Pause",
-            "key": "Pause"
-        }
-    ],
-    "Modifier": [
-        {
-            "shift": "LCtrl",
-            "base": "LCtrl",
-            "num": "LCtrl",
-            "key": "LCtrl"
-        },
-        {
-            "shift": "LWin",
-            "base": "LWin",
-            "num": "LWin",
-            "key": "LWin"
-        },
-        {
-            "shift": "LAlt",
-            "base": "LAlt",
-            "num": "LAlt",
-            "key": "LAlt"
-        },
-        {
-            "shift": "Space",
-            "base": "Space",
-            "num": "Space",
-            "key": "Space"
-        },
-        {
-            "shift": "RAlt",
-            "base": "RAlt",
-            "num": "RAlt",
-            "key": "RAlt"
-        },
-        {
-            "shift": "RWin",
-            "base": "RWin",
-            "num": "RWin",
-            "key": "RWin"
-        },
-        {
-            "shift": "AppsKey",
-            "base": "AppsKey",
-            "num": "AppsKey",
-            "key": "AppsKey"
-        },
-        {
-            "shift": "RCtrl",
-            "base": "RCtrl",
-            "num": "RCtrl",
-            "key": "RCtrl"
-        },
-        {
-            "shift": "Left",
-            "base": "Left",
-            "num": "Left",
-            "key": "Left"
-        },
-        {
-            "shift": "Down",
-            "base": "Down",
-            "num": "Down",
-            "key": "Down"
-        },
-        {
-            "shift": "Right",
-            "base": "Right",
-            "num": "Right",
-            "key": "Right"
+            "base": "PgDn"
         }
     ],
     "Home": [
         {
+            "key": "CapsLock",
             "shift": "CapsLock",
-            "base": "CapsLock",
             "num": "",
-            "key": "CapsLock"
+            "base": "CapsLock"
         },
         {
+            "key": "a",
             "shift": "A",
-            "base": "a",
             "num": "1",
-            "key": "a"
+            "base": "a"
         },
         {
+            "key": "s",
             "shift": "S",
-            "base": "s",
             "num": "2",
-            "key": "s"
+            "base": "s"
         },
         {
+            "key": "d",
             "shift": "D",
-            "base": "d",
             "num": "3",
-            "key": "d"
+            "base": "d"
         },
         {
+            "key": "f",
             "shift": "F",
-            "base": "f",
             "num": "4",
-            "key": "f"
+            "base": "f"
         },
         {
+            "key": "g",
             "shift": "G",
-            "base": "g",
             "num": "5",
-            "key": "g"
+            "base": "g"
         },
         {
+            "key": "h",
             "shift": "H",
-            "base": "h",
             "num": "6",
-            "key": "h"
+            "base": "h"
         },
         {
+            "key": "j",
             "shift": "J",
-            "base": "j",
             "num": "7",
-            "key": "j"
+            "base": "j"
         },
         {
+            "key": "k",
             "shift": "K",
-            "base": "k",
             "num": "8",
-            "key": "k"
+            "base": "k"
         },
         {
+            "key": "l",
             "shift": "L",
-            "base": "l",
             "num": "9",
-            "key": "l"
+            "base": "l"
         },
         {
+            "key": ";",
             "shift": ":",
-            "base": ";",
             "num": "0",
-            "key": ";"
+            "base": ";"
         },
         {
+            "key": "'",
             "shift": "\"",
-            "base": "'",
             "num": "`",
-            "key": "'"
+            "base": "'"
         },
         {
+            "key": "Enter",
             "shift": "Enter",
-            "base": "Enter",
             "num": "Enter",
-            "key": "Enter"
+            "base": "Enter"
+        }
+    ],
+    "Bottom": [
+        {
+            "key": "LShift",
+            "shift": "",
+            "num": "LShift",
+            "base": "LShift"
+        },
+        {
+            "key": "z",
+            "shift": "Z",
+            "num": "",
+            "base": "z"
+        },
+        {
+            "key": "x",
+            "shift": "X",
+            "num": "",
+            "base": "x"
+        },
+        {
+            "key": "c",
+            "shift": "C",
+            "num": "",
+            "base": "c"
+        },
+        {
+            "key": "v",
+            "shift": "V",
+            "num": "",
+            "base": "v"
+        },
+        {
+            "key": "b",
+            "shift": "B",
+            "num": "",
+            "base": "b"
+        },
+        {
+            "key": "n",
+            "shift": "N",
+            "num": "",
+            "base": "n"
+        },
+        {
+            "key": "m",
+            "shift": "M",
+            "num": "",
+            "base": "m"
+        },
+        {
+            "key": ",",
+            "shift": "<",
+            "num": "",
+            "base": ","
+        },
+        {
+            "key": ".",
+            "shift": ">",
+            "num": "",
+            "base": "."
+        },
+        {
+            "key": "/",
+            "shift": "?",
+            "num": "",
+            "base": "/"
+        },
+        {
+            "key": "RShift",
+            "shift": "",
+            "num": "RShift",
+            "base": "RShift"
+        },
+        {
+            "key": "Up",
+            "shift": "Up",
+            "num": "Up",
+            "base": "Up"
+        }
+    ],
+    "Modifier": [
+        {
+            "key": "LCtrl",
+            "shift": "LCtrl",
+            "num": "LCtrl",
+            "base": "LCtrl"
+        },
+        {
+            "key": "LWin",
+            "shift": "LWin",
+            "num": "LWin",
+            "base": "LWin"
+        },
+        {
+            "key": "LAlt",
+            "shift": "LAlt",
+            "num": "LAlt",
+            "base": "LAlt"
+        },
+        {
+            "key": "Space",
+            "shift": "Space",
+            "num": "Space",
+            "base": "Space"
+        },
+        {
+            "key": "RAlt",
+            "shift": "RAlt",
+            "num": "RAlt",
+            "base": "RAlt"
+        },
+        {
+            "key": "RWin",
+            "shift": "RWin",
+            "num": "RWin",
+            "base": "RWin"
+        },
+        {
+            "key": "AppsKey",
+            "shift": "AppsKey",
+            "num": "AppsKey",
+            "base": "AppsKey"
+        },
+        {
+            "key": "RCtrl",
+            "shift": "RCtrl",
+            "num": "RCtrl",
+            "base": "RCtrl"
+        },
+        {
+            "key": "Left",
+            "shift": "Left",
+            "num": "Left",
+            "base": "Left"
+        },
+        {
+            "key": "Down",
+            "shift": "Down",
+            "num": "Down",
+            "base": "Down"
+        },
+        {
+            "key": "Right",
+            "shift": "Right",
+            "num": "Right",
+            "base": "Right"
         }
     ]
 }
