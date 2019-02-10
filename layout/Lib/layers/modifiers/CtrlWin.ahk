@@ -327,3 +327,52 @@ Up_CtrlWin(key) {
 
 
 
+; Modifier -----------------------------------------
+
+LCtrl_CtrlWin(key) {
+	SendInput ^#%key%
+}
+
+LWin_CtrlWin(key) {
+	SendInput ^#%key%
+}
+
+LAlt_CtrlWin(key) {
+	SendInput ^#%key%
+}
+
+Space_CtrlWin(key) {
+	SendInput ^#%key%
+}
+
+RAlt_CtrlWin(key) {
+	SendInput ^#%key%
+}
+
+RWin_CtrlWin(key) {
+	SendInput ^#%key%
+}
+
+AppsKey_CtrlWin(key) {
+	SendInput ^#%key%
+}
+
+RCtrl_CtrlWin(key) {
+	SendInput ^#%key%
+}
+
+Left_CtrlWin(key) {
+	SendInput ^#%key%
+}
+
+Down_CtrlWin(key) {
+	SendInput ^#%key%
+}
+
+Right_CtrlWin(key) {
+	SendInput ^#%key%
+}
+
+
+
+

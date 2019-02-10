@@ -30,21 +30,25 @@ SendMode Input
 
 ; Create key aliases -----------------------------------------
 
+global numLeader := "VK89"
 global shiftLeader := "VK8A"
 global ctrlLeader := "VK8B"
 global altLeader := "VK8C"
 global winLeader := "VK8D"
 
+global numLeaderDn := "VK89 Down"
 global shiftLeaderDn := "VK8A Down"
 global ctrlLeaderDn := "VK8B Down"
 global altLeaderDn := "VK8C Down"
 global winLeaderDn := "VK8D Down"
 
+global numLeaderUp := "VK89 Up"
 global shiftLeaderUp := "VK8A Up"
 global ctrlLeaderUp := "VK8B Up"
 global altLeaderUp := "VK8C Up"
 global winLeaderUp := "VK8D Up"
 
+global numModifier := false
 global shiftModifier := false
 global ctrlModifier := false
 global altModifier := false
@@ -82,6 +86,7 @@ dual := new Dual
 	{
 		Esc_base()
 	}
+	return
 
 *F1::
 	if(Modifiers("F1", "{F1}", "{F1}"))
@@ -108,6 +113,7 @@ dual := new Dual
 	{
 		F1_base()
 	}
+	return
 
 *F2::
 	if(Modifiers("F2", "{F2}", "{F2}"))
@@ -134,6 +140,7 @@ dual := new Dual
 	{
 		F2_base()
 	}
+	return
 
 *F3::
 	if(Modifiers("F3", "{F3}", "{F3}"))
@@ -160,6 +167,7 @@ dual := new Dual
 	{
 		F3_base()
 	}
+	return
 
 *F4::
 	if(Modifiers("F4", "{F4}", "{F4}"))
@@ -186,6 +194,7 @@ dual := new Dual
 	{
 		F4_base()
 	}
+	return
 
 *F5::
 	if(Modifiers("F5", "{F5}", "{F5}"))
@@ -212,6 +221,7 @@ dual := new Dual
 	{
 		F5_base()
 	}
+	return
 
 *F6::
 	if(Modifiers("F6", "{F6}", "{F6}"))
@@ -238,6 +248,7 @@ dual := new Dual
 	{
 		F6_base()
 	}
+	return
 
 *F7::
 	if(Modifiers("F7", "{F7}", "{F7}"))
@@ -264,6 +275,7 @@ dual := new Dual
 	{
 		F7_base()
 	}
+	return
 
 *F8::
 	if(Modifiers("F8", "{F8}", "{F8}"))
@@ -290,6 +302,7 @@ dual := new Dual
 	{
 		F8_base()
 	}
+	return
 
 *F9::
 	if(Modifiers("F9", "{F9}", "{F9}"))
@@ -316,6 +329,7 @@ dual := new Dual
 	{
 		F9_base()
 	}
+	return
 
 *F10::
 	if(Modifiers("F10", "{F10}", "{F10}"))
@@ -342,6 +356,7 @@ dual := new Dual
 	{
 		F10_base()
 	}
+	return
 
 *F11::
 	if(Modifiers("F11", "{F11}", "{F11}"))
@@ -368,6 +383,7 @@ dual := new Dual
 	{
 		F11_base()
 	}
+	return
 
 *F12::
 	if(Modifiers("F12", "{F12}", "{F12}"))
@@ -394,6 +410,7 @@ dual := new Dual
 	{
 		F12_base()
 	}
+	return
 
 *PrintScreen::
 	if(Modifiers("PrintScreen", "{PrintScreen}", "{PrintScreen}"))
@@ -420,6 +437,7 @@ dual := new Dual
 	{
 		PrintScreen_base()
 	}
+	return
 
 *ScrollLock::
 	if(Modifiers("ScrollLock", "{ScrollLock}", "{ScrollLock}"))
@@ -446,6 +464,7 @@ dual := new Dual
 	{
 		ScrollLock_base()
 	}
+	return
 
 *Pause::
 	if(Modifiers("Pause", "{Pause}", "{Pause}"))
@@ -472,6 +491,7 @@ dual := new Dual
 	{
 		Pause_base()
 	}
+	return
 
 
 
@@ -503,6 +523,7 @@ dual := new Dual
 	{
 		backtick_base()
 	}
+	return
 
 *1::
 	if(Modifiers("one", "{1}", "{}"))
@@ -529,6 +550,7 @@ dual := new Dual
 	{
 		one_base()
 	}
+	return
 
 *2::
 	if(Modifiers("two", "{2}", "{}"))
@@ -555,6 +577,7 @@ dual := new Dual
 	{
 		two_base()
 	}
+	return
 
 *3::
 	if(Modifiers("three", "{3}", "{}"))
@@ -581,6 +604,7 @@ dual := new Dual
 	{
 		three_base()
 	}
+	return
 
 *4::
 	if(Modifiers("four", "{4}", "{}"))
@@ -607,6 +631,7 @@ dual := new Dual
 	{
 		four_base()
 	}
+	return
 
 *5::
 	if(Modifiers("five", "{5}", "{}"))
@@ -633,6 +658,7 @@ dual := new Dual
 	{
 		five_base()
 	}
+	return
 
 *6::
 	if(Modifiers("six", "{6}", "{}"))
@@ -659,6 +685,7 @@ dual := new Dual
 	{
 		six_base()
 	}
+	return
 
 *7::
 	if(Modifiers("seven", "{7}", "{}"))
@@ -685,6 +712,7 @@ dual := new Dual
 	{
 		seven_base()
 	}
+	return
 
 *8::
 	if(Modifiers("eight", "{8}", "{}"))
@@ -711,6 +739,7 @@ dual := new Dual
 	{
 		eight_base()
 	}
+	return
 
 *9::
 	if(Modifiers("nine", "{9}", "{}"))
@@ -737,6 +766,7 @@ dual := new Dual
 	{
 		nine_base()
 	}
+	return
 
 *0::
 	if(Modifiers("zero", "{0}", "{}"))
@@ -763,6 +793,7 @@ dual := new Dual
 	{
 		zero_base()
 	}
+	return
 
 *-::
 	if(Modifiers("hyphen", "{-}", "{}"))
@@ -789,6 +820,7 @@ dual := new Dual
 	{
 		hyphen_base()
 	}
+	return
 
 *=::
 	if(Modifiers("equals", "{=}", "{}"))
@@ -815,6 +847,7 @@ dual := new Dual
 	{
 		equals_base()
 	}
+	return
 
 *Backspace::
 	if(Modifiers("Backspace", "{Backspace}", "{Backspace}"))
@@ -841,6 +874,7 @@ dual := new Dual
 	{
 		Backspace_base()
 	}
+	return
 
 *Insert::
 	if(Modifiers("Insert", "{Insert}", "{Insert}"))
@@ -867,6 +901,7 @@ dual := new Dual
 	{
 		Insert_base()
 	}
+	return
 
 *Home::
 	if(Modifiers("Home", "{Home}", "{Home}"))
@@ -893,6 +928,7 @@ dual := new Dual
 	{
 		Home_base()
 	}
+	return
 
 *PgUp::
 	if(Modifiers("PgUp", "{PgUp}", "{PgUp}"))
@@ -919,6 +955,7 @@ dual := new Dual
 	{
 		PgUp_base()
 	}
+	return
 
 
 
@@ -950,6 +987,7 @@ dual := new Dual
 	{
 		Tab_base()
 	}
+	return
 
 *q::
 	if(Modifiers("q", "{q}", "{!}"))
@@ -976,6 +1014,7 @@ dual := new Dual
 	{
 		q_base()
 	}
+	return
 
 *w::
 	if(Modifiers("w", "{w}", "{@}"))
@@ -1002,6 +1041,7 @@ dual := new Dual
 	{
 		w_base()
 	}
+	return
 
 *e::
 	if(Modifiers("e", "{e}", "{#}"))
@@ -1028,6 +1068,7 @@ dual := new Dual
 	{
 		e_base()
 	}
+	return
 
 *r::
 	if(Modifiers("r", "{r}", "{$}"))
@@ -1054,6 +1095,7 @@ dual := new Dual
 	{
 		r_base()
 	}
+	return
 
 *t::
 	if(Modifiers("t", "{t}", "{`%}"))
@@ -1080,6 +1122,7 @@ dual := new Dual
 	{
 		t_base()
 	}
+	return
 
 *y::
 	if(Modifiers("y", "{y}", "{^}"))
@@ -1106,6 +1149,7 @@ dual := new Dual
 	{
 		y_base()
 	}
+	return
 
 *u::
 	if(Modifiers("u", "{u}", "{&}"))
@@ -1132,6 +1176,7 @@ dual := new Dual
 	{
 		u_base()
 	}
+	return
 
 *i::
 	if(Modifiers("i", "{i}", "{*}"))
@@ -1158,6 +1203,7 @@ dual := new Dual
 	{
 		i_base()
 	}
+	return
 
 *o::
 	if(Modifiers("o", "{o}", "{(}"))
@@ -1184,6 +1230,7 @@ dual := new Dual
 	{
 		o_base()
 	}
+	return
 
 *p::
 	if(Modifiers("p", "{p}", "{)}"))
@@ -1210,6 +1257,7 @@ dual := new Dual
 	{
 		p_base()
 	}
+	return
 
 *[::
 	if(Modifiers("opening_bracket", "{[}", "{-}"))
@@ -1236,6 +1284,7 @@ dual := new Dual
 	{
 		opening_bracket_base()
 	}
+	return
 
 *]::
 	if(Modifiers("closing_bracket", "{]}", "{=}"))
@@ -1262,6 +1311,7 @@ dual := new Dual
 	{
 		closing_bracket_base()
 	}
+	return
 
 *\::
 	if(Modifiers("backslash", "{\}", "{}"))
@@ -1288,6 +1338,7 @@ dual := new Dual
 	{
 		backslash_base()
 	}
+	return
 
 *Delete::
 	if(Modifiers("Delete", "{Delete}", "{Delete}"))
@@ -1314,6 +1365,7 @@ dual := new Dual
 	{
 		Delete_base()
 	}
+	return
 
 *End::
 	if(Modifiers("End", "{End}", "{End}"))
@@ -1340,6 +1392,7 @@ dual := new Dual
 	{
 		End_base()
 	}
+	return
 
 *PgDn::
 	if(Modifiers("PgDn", "{PgDn}", "{PgDn}"))
@@ -1366,6 +1419,7 @@ dual := new Dual
 	{
 		PgDn_base()
 	}
+	return
 
 
 
@@ -1373,30 +1427,13 @@ dual := new Dual
 ; Home -----------------------------------------
 
 *CapsLock::
-	if(Modifiers("CapsLock", "{CapsLock}", "{CapsLock}"))
-	{
-		return
-	}
-	else if(GetKeyState(numLeader))
-	{
-		CapsLock_numLeader()
-	}
-	else if(numModifier)
-	{
-		CapsLock_numModifier()
-	}
-	else if(GetKeyState(shiftLeader))
-	{
-		CapsLock_shiftLeader()
-	}
-	else if(shiftModifier)
-	{
-		CapsLock_shiftModifier()
-	}
-	else
-	{
-		CapsLock_base()
-	}
+	dual.combine([], numLeaderDn, settings = false, {(numLeader): numLeaderUp})
+	numModifier := true
+	return
+*CapsLock Up::
+	dual.combine([], numLeaderDn, settings = false, {(numLeader): numLeaderUp})
+	numModifier := false
+	return
 
 *a::
 	if(Modifiers("aa", "{a}", "{1}"))
@@ -1423,6 +1460,7 @@ dual := new Dual
 	{
 		aa_base()
 	}
+	return
 
 *s::
 	if(Modifiers("s", "{s}", "{2}"))
@@ -1449,6 +1487,7 @@ dual := new Dual
 	{
 		s_base()
 	}
+	return
 
 *d::
 	if(Modifiers("d", "{d}", "{3}"))
@@ -1475,6 +1514,7 @@ dual := new Dual
 	{
 		d_base()
 	}
+	return
 
 *f::
 	if(Modifiers("f", "{f}", "{4}"))
@@ -1501,6 +1541,7 @@ dual := new Dual
 	{
 		f_base()
 	}
+	return
 
 *g::
 	if(Modifiers("g", "{g}", "{5}"))
@@ -1527,6 +1568,7 @@ dual := new Dual
 	{
 		g_base()
 	}
+	return
 
 *h::
 	if(Modifiers("h", "{h}", "{6}"))
@@ -1553,6 +1595,7 @@ dual := new Dual
 	{
 		h_base()
 	}
+	return
 
 *j::
 	if(Modifiers("j", "{j}", "{7}"))
@@ -1579,6 +1622,7 @@ dual := new Dual
 	{
 		j_base()
 	}
+	return
 
 *k::
 	if(Modifiers("k", "{k}", "{8}"))
@@ -1605,6 +1649,7 @@ dual := new Dual
 	{
 		k_base()
 	}
+	return
 
 *l::
 	if(Modifiers("l", "{l}", "{9}"))
@@ -1631,6 +1676,7 @@ dual := new Dual
 	{
 		l_base()
 	}
+	return
 
 *`;::
 	if(Modifiers("semicolon", "{`;}", "{0}"))
@@ -1657,6 +1703,7 @@ dual := new Dual
 	{
 		semicolon_base()
 	}
+	return
 
 *'::
 	if(Modifiers("apostrophe", "{'}", "{`}"))
@@ -1683,6 +1730,7 @@ dual := new Dual
 	{
 		apostrophe_base()
 	}
+	return
 
 *Enter::
 	if(Modifiers("Enter", "{Enter}", "{Enter}"))
@@ -1709,6 +1757,7 @@ dual := new Dual
 	{
 		Enter_base()
 	}
+	return
 
 
 
@@ -1749,6 +1798,7 @@ dual := new Dual
 	{
 		z_base()
 	}
+	return
 
 *x::
 	if(Modifiers("x", "{x}", "{}"))
@@ -1775,6 +1825,7 @@ dual := new Dual
 	{
 		x_base()
 	}
+	return
 
 *c::
 	if(Modifiers("c", "{c}", "{}"))
@@ -1801,6 +1852,7 @@ dual := new Dual
 	{
 		c_base()
 	}
+	return
 
 *v::
 	if(Modifiers("v", "{v}", "{}"))
@@ -1827,6 +1879,7 @@ dual := new Dual
 	{
 		v_base()
 	}
+	return
 
 *b::
 	if(Modifiers("b", "{b}", "{}"))
@@ -1853,6 +1906,7 @@ dual := new Dual
 	{
 		b_base()
 	}
+	return
 
 *n::
 	if(Modifiers("n", "{n}", "{}"))
@@ -1879,6 +1933,7 @@ dual := new Dual
 	{
 		n_base()
 	}
+	return
 
 *m::
 	if(Modifiers("m", "{m}", "{}"))
@@ -1905,6 +1960,7 @@ dual := new Dual
 	{
 		m_base()
 	}
+	return
 
 *,::
 	if(Modifiers("comma", "{,}", "{}"))
@@ -1931,6 +1987,7 @@ dual := new Dual
 	{
 		comma_base()
 	}
+	return
 
 *.::
 	if(Modifiers("period", "{.}", "{}"))
@@ -1957,6 +2014,7 @@ dual := new Dual
 	{
 		period_base()
 	}
+	return
 
 */::
 	if(Modifiers("slash", "{/}", "{}"))
@@ -1983,6 +2041,7 @@ dual := new Dual
 	{
 		slash_base()
 	}
+	return
 
 *RShift::
 	dual.combine([], shiftLeaderDn, settings = false, {(shiftLeader): shiftLeaderUp})
@@ -2018,6 +2077,201 @@ dual := new Dual
 	{
 		Up_base()
 	}
+	return
+
+
+
+
+; Modifier -----------------------------------------
+
+*LCtrl::
+	dual.combine([], ctrlLeaderDn, settings = false, {(ctrlLeader): ctrlLeaderUp})
+	ctrlModifier := true
+	return
+*LCtrl Up::
+	dual.combine([], ctrlLeaderDn, settings = false, {(ctrlLeader): ctrlLeaderUp})
+	ctrlModifier := false
+	return
+
+*LWin::
+	dual.combine([], winLeaderDn, settings = false, {(winLeader): winLeaderUp})
+	winModifier := true
+	return
+*LWin Up::
+	dual.combine([], winLeaderDn, settings = false, {(winLeader): winLeaderUp})
+	winModifier := false
+	return
+
+*LAlt::
+	dual.combine([], altLeaderDn, settings = false, {(altLeader): altLeaderUp})
+	altModifier := true
+	return
+*LAlt Up::
+	dual.combine([], altLeaderDn, settings = false, {(altLeader): altLeaderUp})
+	altModifier := false
+	return
+
+*Space::
+	if(Modifiers("Space", "{Space}", "{Space}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
+	{
+		Space_numLeader()
+	}
+	else if(numModifier)
+	{
+		Space_numModifier()
+	}
+	else if(GetKeyState(shiftLeader))
+	{
+		Space_shiftLeader()
+	}
+	else if(shiftModifier)
+	{
+		Space_shiftModifier()
+	}
+	else
+	{
+		Space_base()
+	}
+	return
+
+*RAlt::
+	dual.combine([], altLeaderDn, settings = false, {(altLeader): altLeaderUp})
+	altModifier := true
+	return
+*RAlt Up::
+	dual.combine([], altLeaderDn, settings = false, {(altLeader): altLeaderUp})
+	altModifier := false
+	return
+
+*RWin::
+	dual.combine([], winLeaderDn, settings = false, {(winLeader): winLeaderUp})
+	winModifier := true
+	return
+*RWin Up::
+	dual.combine([], winLeaderDn, settings = false, {(winLeader): winLeaderUp})
+	winModifier := false
+	return
+
+*AppsKey::
+	if(Modifiers("AppsKey", "{AppsKey}", "{AppsKey}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
+	{
+		AppsKey_numLeader()
+	}
+	else if(numModifier)
+	{
+		AppsKey_numModifier()
+	}
+	else if(GetKeyState(shiftLeader))
+	{
+		AppsKey_shiftLeader()
+	}
+	else if(shiftModifier)
+	{
+		AppsKey_shiftModifier()
+	}
+	else
+	{
+		AppsKey_base()
+	}
+	return
+
+*RCtrl::
+	dual.combine([], ctrlLeaderDn, settings = false, {(ctrlLeader): ctrlLeaderUp})
+	ctrlModifier := true
+	return
+*RCtrl Up::
+	dual.combine([], ctrlLeaderDn, settings = false, {(ctrlLeader): ctrlLeaderUp})
+	ctrlModifier := false
+	return
+
+*Left::
+	if(Modifiers("Left", "{Left}", "{Left}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
+	{
+		Left_numLeader()
+	}
+	else if(numModifier)
+	{
+		Left_numModifier()
+	}
+	else if(GetKeyState(shiftLeader))
+	{
+		Left_shiftLeader()
+	}
+	else if(shiftModifier)
+	{
+		Left_shiftModifier()
+	}
+	else
+	{
+		Left_base()
+	}
+	return
+
+*Down::
+	if(Modifiers("Down", "{Down}", "{Down}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
+	{
+		Down_numLeader()
+	}
+	else if(numModifier)
+	{
+		Down_numModifier()
+	}
+	else if(GetKeyState(shiftLeader))
+	{
+		Down_shiftLeader()
+	}
+	else if(shiftModifier)
+	{
+		Down_shiftModifier()
+	}
+	else
+	{
+		Down_base()
+	}
+	return
+
+*Right::
+	if(Modifiers("Right", "{Right}", "{Right}"))
+	{
+		return
+	}
+	else if(GetKeyState(numLeader))
+	{
+		Right_numLeader()
+	}
+	else if(numModifier)
+	{
+		Right_numModifier()
+	}
+	else if(GetKeyState(shiftLeader))
+	{
+		Right_shiftLeader()
+	}
+	else if(shiftModifier)
+	{
+		Right_shiftModifier()
+	}
+	else
+	{
+		Right_base()
+	}
+	return
 
 
 

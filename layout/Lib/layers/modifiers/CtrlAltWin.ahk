@@ -327,3 +327,52 @@ Up_CtrlAltWin(key) {
 
 
 
+; Modifier -----------------------------------------
+
+LCtrl_CtrlAltWin(key) {
+	SendInput ^!#%key%
+}
+
+LWin_CtrlAltWin(key) {
+	SendInput ^!#%key%
+}
+
+LAlt_CtrlAltWin(key) {
+	SendInput ^!#%key%
+}
+
+Space_CtrlAltWin(key) {
+	SendInput ^!#%key%
+}
+
+RAlt_CtrlAltWin(key) {
+	SendInput ^!#%key%
+}
+
+RWin_CtrlAltWin(key) {
+	SendInput ^!#%key%
+}
+
+AppsKey_CtrlAltWin(key) {
+	SendInput ^!#%key%
+}
+
+RCtrl_CtrlAltWin(key) {
+	SendInput ^!#%key%
+}
+
+Left_CtrlAltWin(key) {
+	SendInput ^!#%key%
+}
+
+Down_CtrlAltWin(key) {
+	SendInput ^!#%key%
+}
+
+Right_CtrlAltWin(key) {
+	SendInput ^!#%key%
+}
+
+
+
+

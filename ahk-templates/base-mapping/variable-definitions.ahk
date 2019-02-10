@@ -30,21 +30,25 @@ SendMode Input
 
 ; Create key aliases -----------------------------------------
 
+global numLeader := "VK89"
 global shiftLeader := "VK8A"
 global ctrlLeader := "VK8B"
 global altLeader := "VK8C"
 global winLeader := "VK8D"
 
+global numLeaderDn := "VK89 Down"
 global shiftLeaderDn := "VK8A Down"
 global ctrlLeaderDn := "VK8B Down"
 global altLeaderDn := "VK8C Down"
 global winLeaderDn := "VK8D Down"
 
+global numLeaderUp := "VK89 Up"
 global shiftLeaderUp := "VK8A Up"
 global ctrlLeaderUp := "VK8B Up"
 global altLeaderUp := "VK8C Up"
 global winLeaderUp := "VK8D Up"
 
+global numModifier := false
 global shiftModifier := false
 global ctrlModifier := false
 global altModifier := false

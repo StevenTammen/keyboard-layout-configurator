@@ -62,7 +62,7 @@ def create_mapping(keymap):
 
 	add_script_setup(remap)
 
-	row_names = ["Function", "Number", "Top", "Home", "Bottom"]
+	row_names = ["Function", "Number", "Top", "Home", "Bottom", "Modifier"]
 	for row_name in row_names:
 		add_row_labels(files, row_name)
 		row = keymap[row_name]
@@ -122,7 +122,10 @@ def add_to_remap(remap, key, cleaned_key, num_key):
 	if is_modifier(key):
 		# Remove left/right designation and make lowercase to
 		# use modifier as a prefix
-		prefix = (key[1:]).lower()
+		if(key == "CapsLock"):
+			prefix = "num"
+		else:
+			prefix = (key[1:]).lower()
 		modifier_key_vars = {
 			'modifier': key,
 			'prefix'  : prefix
@@ -242,12 +245,8 @@ def escape_for_autohotkey(key):
 	:param key:
 	:return:
 	"""
-	# if key == ",":
-	#	return "`,"
 	if key == "%":
 		return "`%"
-	# elif key == "`":
-	#	return "``"
 	elif key == ";":
 		return "`;"
 	else:
@@ -354,11 +353,11 @@ def to_text(key):
 		return key
 
 def is_modifier(key):
-	modifiers = ["LShift", "LCtrl", "LAlt", "LWin", "RShift", "RCtrl", "RAlt", "RWin"]
+	modifiers = ["CapsLock", "LShift", "LCtrl", "LAlt", "LWin", "RShift", "RCtrl", "RAlt", "RWin"]
 	return (key in modifiers)
 
 
-def create_keymap(physical_file, shift_file, num_file):
+def create_keymap(physical_file, num_file, shift_file, base_file):
 	"""
 
 	:param physical_file:
@@ -366,14 +365,17 @@ def create_keymap(physical_file, shift_file, num_file):
 	"""
 
 	keymap = {"Function": [], "Number": [], "Top": [], "Home": [],
-			  "Bottom"  : []}  # The dictionary containing the kay mappings for the hotkeys
+			  "Bottom": [], "Modifier": []}  # The dictionary containing the kay mappings for the hotkeys
 
 	physical_data = json.load(physical_file)  # Parse the .json file into a Python JSON object
-	shift_data = json.load(shift_file)
 	num_data = json.load(num_file)
+	shift_data = json.load(shift_file)
+	base_data = json.load(base_file)
+
 	physical_data = sanitize_json(physical_data)
-	shift_data = sanitize_json(shift_data)
 	num_data = sanitize_json(num_data)
+	shift_data = sanitize_json(shift_data)
+	base_data = sanitize_json(base_data)
 
 	# Iterate through the json object and create appropriate mappings
 	for i in range(0, len(physical_data)):
@@ -384,29 +386,35 @@ def create_keymap(physical_file, shift_file, num_file):
 				if (i == 0):
 					function_row = keymap["Function"]
 					sub_dict = {'key' : physical_data[i][j], 'shift': shift_data[i][j], 'num': num_data[i][j],
-								'base': ' '}
+								'base': base_data[i][j]}
 					function_row.append(sub_dict)
 				elif (i == 1):
 					num_row = keymap["Number"]
 					sub_dict = {'key' : physical_data[i][j], 'shift': shift_data[i][j], 'num': num_data[i][j],
-								'base': ' '}
+								'base': base_data[i][j]}
 					num_row.append(sub_dict)
 				elif (i == 2):
 					top_row = keymap["Top"]
 					sub_dict = {'key' : physical_data[i][j], 'shift': shift_data[i][j], 'num': num_data[i][j],
-								'base': ' '}
+								'base': base_data[i][j]}
 					top_row.append(sub_dict)
 
 				elif (i == 3):
 					home_row = keymap["Home"]
 					sub_dict = {'key' : physical_data[i][j], 'shift': shift_data[i][j], 'num': num_data[i][j],
-								'base': ' '}
+								'base': base_data[i][j]}
 					home_row.append(sub_dict)
 
 				elif (i == 4):
 					bot_row = keymap["Bottom"]
 					sub_dict = {'key' : physical_data[i][j], 'shift': shift_data[i][j], 'num': num_data[i][j],
-								'base': ' '}
+								'base': base_data[i][j]}
+					bot_row.append(sub_dict)
+
+				elif (i == 5):
+					bot_row = keymap["Modifier"]
+					sub_dict = {'key' : physical_data[i][j], 'shift': shift_data[i][j], 'num': num_data[i][j],
+								'base': base_data[i][j]}
 					bot_row.append(sub_dict)
 
 	# pretty(keymap)
@@ -436,8 +444,8 @@ def sanitize_json(json_data):
 
 
 def main():
-	keymap = create_keymap(open("layout-json/physical.json"), open("layout-json/shift.json"),
-						   open("layout-json/num.json"))
+	keymap = create_keymap(open("layout-json/physical.json"), open("layout-json/num.json"),
+					open("layout-json/shift.json"), open("layout-json/base.json"))
 	create_mapping(keymap)
 
 

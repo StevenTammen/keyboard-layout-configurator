@@ -327,3 +327,52 @@ Up_Win(key) {
 
 
 
+; Modifier -----------------------------------------
+
+LCtrl_Win(key) {
+	SendInput #%key%
+}
+
+LWin_Win(key) {
+	SendInput #%key%
+}
+
+LAlt_Win(key) {
+	SendInput #%key%
+}
+
+Space_Win(key) {
+	SendInput #%key%
+}
+
+RAlt_Win(key) {
+	SendInput #%key%
+}
+
+RWin_Win(key) {
+	SendInput #%key%
+}
+
+AppsKey_Win(key) {
+	SendInput #%key%
+}
+
+RCtrl_Win(key) {
+	SendInput #%key%
+}
+
+Left_Win(key) {
+	SendInput #%key%
+}
+
+Down_Win(key) {
+	SendInput #%key%
+}
+
+Right_Win(key) {
+	SendInput #%key%
+}
+
+
+
+

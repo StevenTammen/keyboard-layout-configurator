@@ -337,7 +337,7 @@ Enter_shiftModifier()
 
 LShift_shiftModifier()
 {
-	SendInput {LShift}
+	SendInput {}
 }
 
 z_shiftModifier()
@@ -392,12 +392,72 @@ slash_shiftModifier()
 
 RShift_shiftModifier()
 {
-	SendInput {RShift}
+	SendInput {}
 }
 
 Up_shiftModifier()
 {
 	SendInput {Up}
+}
+
+
+
+
+; Modifier -----------------------------------------
+
+LCtrl_shiftModifier()
+{
+	SendInput {LCtrl}
+}
+
+LWin_shiftModifier()
+{
+	SendInput {LWin}
+}
+
+LAlt_shiftModifier()
+{
+	SendInput {LAlt}
+}
+
+Space_shiftModifier()
+{
+	SendInput {Space}
+}
+
+RAlt_shiftModifier()
+{
+	SendInput {RAlt}
+}
+
+RWin_shiftModifier()
+{
+	SendInput {RWin}
+}
+
+AppsKey_shiftModifier()
+{
+	SendInput {AppsKey}
+}
+
+RCtrl_shiftModifier()
+{
+	SendInput {RCtrl}
+}
+
+Left_shiftModifier()
+{
+	SendInput {Left}
+}
+
+Down_shiftModifier()
+{
+	SendInput {Down}
+}
+
+Right_shiftModifier()
+{
+	SendInput {Right}
 }
 
 
