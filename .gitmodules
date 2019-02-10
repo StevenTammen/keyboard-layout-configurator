@@ -1,0 +1,3 @@
+[submodule "layout/Lib/dual"]
+	path = layout/Lib/dual
+	url = https://github.com/lydell/dual.git

@@ -1,3 +1,14 @@
+#NoEnv
+SendMode Input
+#SingleInstance force
+
+#Include <dual/dual>
+#Include <layers/numLeader>
+#Include <layers/numModifier>
+#Include <layers/shiftLeader>
+#Include <layers/shiftModifier>
+#Include <layers/base>
+
 global shiftLeader := "VK8A"
 global ctrlLeader := "VK8B"
 global altLeader := "VK8C"
@@ -18,9 +29,12 @@ global ctrlModifier := false
 global altModifier := false
 global winModifier := false
 
+; Make dual object
+dual := new Dual
+
 ; Function -----------------------------------------
 
-Esc::
+*Esc::
 	if(GetKeyState(numLeader))
 	{
 		Esc_numLeader()
@@ -42,7 +56,7 @@ Esc::
 		Esc_base()
 	}
 
-F1::
+*F1::
 	if(GetKeyState(numLeader))
 	{
 		F1_numLeader()
@@ -64,7 +78,7 @@ F1::
 		F1_base()
 	}
 
-F2::
+*F2::
 	if(GetKeyState(numLeader))
 	{
 		F2_numLeader()
@@ -86,7 +100,7 @@ F2::
 		F2_base()
 	}
 
-F3::
+*F3::
 	if(GetKeyState(numLeader))
 	{
 		F3_numLeader()
@@ -108,7 +122,7 @@ F3::
 		F3_base()
 	}
 
-F4::
+*F4::
 	if(GetKeyState(numLeader))
 	{
 		F4_numLeader()
@@ -130,7 +144,7 @@ F4::
 		F4_base()
 	}
 
-F5::
+*F5::
 	if(GetKeyState(numLeader))
 	{
 		F5_numLeader()
@@ -152,7 +166,7 @@ F5::
 		F5_base()
 	}
 
-F6::
+*F6::
 	if(GetKeyState(numLeader))
 	{
 		F6_numLeader()
@@ -174,7 +188,7 @@ F6::
 		F6_base()
 	}
 
-F7::
+*F7::
 	if(GetKeyState(numLeader))
 	{
 		F7_numLeader()
@@ -196,7 +210,7 @@ F7::
 		F7_base()
 	}
 
-F8::
+*F8::
 	if(GetKeyState(numLeader))
 	{
 		F8_numLeader()
@@ -218,7 +232,7 @@ F8::
 		F8_base()
 	}
 
-F9::
+*F9::
 	if(GetKeyState(numLeader))
 	{
 		F9_numLeader()
@@ -240,7 +254,7 @@ F9::
 		F9_base()
 	}
 
-F10::
+*F10::
 	if(GetKeyState(numLeader))
 	{
 		F10_numLeader()
@@ -262,7 +276,7 @@ F10::
 		F10_base()
 	}
 
-F11::
+*F11::
 	if(GetKeyState(numLeader))
 	{
 		F11_numLeader()
@@ -284,7 +298,7 @@ F11::
 		F11_base()
 	}
 
-F12::
+*F12::
 	if(GetKeyState(numLeader))
 	{
 		F12_numLeader()
@@ -306,7 +320,7 @@ F12::
 		F12_base()
 	}
 
-PrintScreen::
+*PrintScreen::
 	if(GetKeyState(numLeader))
 	{
 		PrintScreen_numLeader()
@@ -328,7 +342,7 @@ PrintScreen::
 		PrintScreen_base()
 	}
 
-ScrollLock::
+*ScrollLock::
 	if(GetKeyState(numLeader))
 	{
 		ScrollLock_numLeader()
@@ -350,7 +364,7 @@ ScrollLock::
 		ScrollLock_base()
 	}
 
-Pause::
+*Pause::
 	if(GetKeyState(numLeader))
 	{
 		Pause_numLeader()
@@ -377,7 +391,7 @@ Pause::
 
 ; Number -----------------------------------------
 
-backtick::
+*`::
 	if(GetKeyState(numLeader))
 	{
 		backtick_numLeader()
@@ -399,7 +413,7 @@ backtick::
 		backtick_base()
 	}
 
-one::
+*1::
 	if(GetKeyState(numLeader))
 	{
 		one_numLeader()
@@ -421,7 +435,7 @@ one::
 		one_base()
 	}
 
-two::
+*2::
 	if(GetKeyState(numLeader))
 	{
 		two_numLeader()
@@ -443,7 +457,7 @@ two::
 		two_base()
 	}
 
-three::
+*3::
 	if(GetKeyState(numLeader))
 	{
 		three_numLeader()
@@ -465,7 +479,7 @@ three::
 		three_base()
 	}
 
-four::
+*4::
 	if(GetKeyState(numLeader))
 	{
 		four_numLeader()
@@ -487,7 +501,7 @@ four::
 		four_base()
 	}
 
-five::
+*5::
 	if(GetKeyState(numLeader))
 	{
 		five_numLeader()
@@ -509,7 +523,7 @@ five::
 		five_base()
 	}
 
-six::
+*6::
 	if(GetKeyState(numLeader))
 	{
 		six_numLeader()
@@ -531,7 +545,7 @@ six::
 		six_base()
 	}
 
-seven::
+*7::
 	if(GetKeyState(numLeader))
 	{
 		seven_numLeader()
@@ -553,7 +567,7 @@ seven::
 		seven_base()
 	}
 
-eight::
+*8::
 	if(GetKeyState(numLeader))
 	{
 		eight_numLeader()
@@ -575,7 +589,7 @@ eight::
 		eight_base()
 	}
 
-nine::
+*9::
 	if(GetKeyState(numLeader))
 	{
 		nine_numLeader()
@@ -597,7 +611,7 @@ nine::
 		nine_base()
 	}
 
-zero::
+*0::
 	if(GetKeyState(numLeader))
 	{
 		zero_numLeader()
@@ -619,7 +633,7 @@ zero::
 		zero_base()
 	}
 
-hyphen::
+*-::
 	if(GetKeyState(numLeader))
 	{
 		hyphen_numLeader()
@@ -641,7 +655,7 @@ hyphen::
 		hyphen_base()
 	}
 
-equals::
+*=::
 	if(GetKeyState(numLeader))
 	{
 		equals_numLeader()
@@ -663,7 +677,7 @@ equals::
 		equals_base()
 	}
 
-Backspace::
+*Backspace::
 	if(GetKeyState(numLeader))
 	{
 		Backspace_numLeader()
@@ -685,7 +699,7 @@ Backspace::
 		Backspace_base()
 	}
 
-Insert::
+*Insert::
 	if(GetKeyState(numLeader))
 	{
 		Insert_numLeader()
@@ -707,7 +721,7 @@ Insert::
 		Insert_base()
 	}
 
-Home::
+*Home::
 	if(GetKeyState(numLeader))
 	{
 		Home_numLeader()
@@ -729,7 +743,7 @@ Home::
 		Home_base()
 	}
 
-PgUp::
+*PgUp::
 	if(GetKeyState(numLeader))
 	{
 		PgUp_numLeader()
@@ -756,7 +770,7 @@ PgUp::
 
 ; Top -----------------------------------------
 
-Tab::
+*Tab::
 	if(GetKeyState(numLeader))
 	{
 		Tab_numLeader()
@@ -778,7 +792,7 @@ Tab::
 		Tab_base()
 	}
 
-q::
+*q::
 	if(GetKeyState(numLeader))
 	{
 		q_numLeader()
@@ -800,7 +814,7 @@ q::
 		q_base()
 	}
 
-w::
+*w::
 	if(GetKeyState(numLeader))
 	{
 		w_numLeader()
@@ -822,7 +836,7 @@ w::
 		w_base()
 	}
 
-e::
+*e::
 	if(GetKeyState(numLeader))
 	{
 		e_numLeader()
@@ -844,7 +858,7 @@ e::
 		e_base()
 	}
 
-r::
+*r::
 	if(GetKeyState(numLeader))
 	{
 		r_numLeader()
@@ -866,7 +880,7 @@ r::
 		r_base()
 	}
 
-t::
+*t::
 	if(GetKeyState(numLeader))
 	{
 		t_numLeader()
@@ -888,7 +902,7 @@ t::
 		t_base()
 	}
 
-y::
+*y::
 	if(GetKeyState(numLeader))
 	{
 		y_numLeader()
@@ -910,7 +924,7 @@ y::
 		y_base()
 	}
 
-u::
+*u::
 	if(GetKeyState(numLeader))
 	{
 		u_numLeader()
@@ -932,7 +946,7 @@ u::
 		u_base()
 	}
 
-i::
+*i::
 	if(GetKeyState(numLeader))
 	{
 		i_numLeader()
@@ -954,7 +968,7 @@ i::
 		i_base()
 	}
 
-o::
+*o::
 	if(GetKeyState(numLeader))
 	{
 		o_numLeader()
@@ -976,7 +990,7 @@ o::
 		o_base()
 	}
 
-p::
+*p::
 	if(GetKeyState(numLeader))
 	{
 		p_numLeader()
@@ -998,7 +1012,7 @@ p::
 		p_base()
 	}
 
-opening_bracket::
+*[::
 	if(GetKeyState(numLeader))
 	{
 		opening_bracket_numLeader()
@@ -1020,7 +1034,7 @@ opening_bracket::
 		opening_bracket_base()
 	}
 
-closing_bracket::
+*]::
 	if(GetKeyState(numLeader))
 	{
 		closing_bracket_numLeader()
@@ -1042,7 +1056,7 @@ closing_bracket::
 		closing_bracket_base()
 	}
 
-backslash::
+*\::
 	if(GetKeyState(numLeader))
 	{
 		backslash_numLeader()
@@ -1064,7 +1078,7 @@ backslash::
 		backslash_base()
 	}
 
-Delete::
+*Delete::
 	if(GetKeyState(numLeader))
 	{
 		Delete_numLeader()
@@ -1086,7 +1100,7 @@ Delete::
 		Delete_base()
 	}
 
-End::
+*End::
 	if(GetKeyState(numLeader))
 	{
 		End_numLeader()
@@ -1108,7 +1122,7 @@ End::
 		End_base()
 	}
 
-PgDn::
+*PgDn::
 	if(GetKeyState(numLeader))
 	{
 		PgDn_numLeader()
@@ -1135,7 +1149,7 @@ PgDn::
 
 ; Home -----------------------------------------
 
-CapsLock::
+*CapsLock::
 	if(GetKeyState(numLeader))
 	{
 		CapsLock_numLeader()
@@ -1157,29 +1171,29 @@ CapsLock::
 		CapsLock_base()
 	}
 
-a::
+*a::
 	if(GetKeyState(numLeader))
 	{
-		a_numLeader()
+		aa_numLeader()
 	}
 	else if(numModifier)
 	{
-		a_numModifier()
+		aa_numModifier()
 	}
 	else if(GetKeyState(shiftLeader))
 	{
-		a_shiftLeader()
+		aa_shiftLeader()
 	}
 	else if(shiftModifier)
 	{
-		a_shiftModifier()
+		aa_shiftModifier()
 	}
 	else
 	{
-		a_base()
+		aa_base()
 	}
 
-s::
+*s::
 	if(GetKeyState(numLeader))
 	{
 		s_numLeader()
@@ -1201,7 +1215,7 @@ s::
 		s_base()
 	}
 
-d::
+*d::
 	if(GetKeyState(numLeader))
 	{
 		d_numLeader()
@@ -1223,7 +1237,7 @@ d::
 		d_base()
 	}
 
-f::
+*f::
 	if(GetKeyState(numLeader))
 	{
 		f_numLeader()
@@ -1245,7 +1259,7 @@ f::
 		f_base()
 	}
 
-g::
+*g::
 	if(GetKeyState(numLeader))
 	{
 		g_numLeader()
@@ -1267,7 +1281,7 @@ g::
 		g_base()
 	}
 
-h::
+*h::
 	if(GetKeyState(numLeader))
 	{
 		h_numLeader()
@@ -1289,7 +1303,7 @@ h::
 		h_base()
 	}
 
-j::
+*j::
 	if(GetKeyState(numLeader))
 	{
 		j_numLeader()
@@ -1311,7 +1325,7 @@ j::
 		j_base()
 	}
 
-k::
+*k::
 	if(GetKeyState(numLeader))
 	{
 		k_numLeader()
@@ -1333,7 +1347,7 @@ k::
 		k_base()
 	}
 
-l::
+*l::
 	if(GetKeyState(numLeader))
 	{
 		l_numLeader()
@@ -1355,7 +1369,7 @@ l::
 		l_base()
 	}
 
-semicolon::
+*;::
 	if(GetKeyState(numLeader))
 	{
 		semicolon_numLeader()
@@ -1377,7 +1391,7 @@ semicolon::
 		semicolon_base()
 	}
 
-apostrophe::
+*'::
 	if(GetKeyState(numLeader))
 	{
 		apostrophe_numLeader()
@@ -1399,7 +1413,7 @@ apostrophe::
 		apostrophe_base()
 	}
 
-Enter::
+*Enter::
 	if(GetKeyState(numLeader))
 	{
 		Enter_numLeader()
@@ -1435,7 +1449,7 @@ LShift Up::
 	shiftModifier := false
 	return
 
-z::
+*z::
 	if(GetKeyState(numLeader))
 	{
 		z_numLeader()
@@ -1457,7 +1471,7 @@ z::
 		z_base()
 	}
 
-x::
+*x::
 	if(GetKeyState(numLeader))
 	{
 		x_numLeader()
@@ -1479,7 +1493,7 @@ x::
 		x_base()
 	}
 
-c::
+*c::
 	if(GetKeyState(numLeader))
 	{
 		c_numLeader()
@@ -1501,7 +1515,7 @@ c::
 		c_base()
 	}
 
-v::
+*v::
 	if(GetKeyState(numLeader))
 	{
 		v_numLeader()
@@ -1523,7 +1537,7 @@ v::
 		v_base()
 	}
 
-b::
+*b::
 	if(GetKeyState(numLeader))
 	{
 		b_numLeader()
@@ -1545,7 +1559,7 @@ b::
 		b_base()
 	}
 
-n::
+*n::
 	if(GetKeyState(numLeader))
 	{
 		n_numLeader()
@@ -1567,7 +1581,7 @@ n::
 		n_base()
 	}
 
-m::
+*m::
 	if(GetKeyState(numLeader))
 	{
 		m_numLeader()
@@ -1589,7 +1603,7 @@ m::
 		m_base()
 	}
 
-comma::
+*,::
 	if(GetKeyState(numLeader))
 	{
 		comma_numLeader()
@@ -1611,7 +1625,7 @@ comma::
 		comma_base()
 	}
 
-period::
+*.::
 	if(GetKeyState(numLeader))
 	{
 		period_numLeader()
@@ -1633,7 +1647,7 @@ period::
 		period_base()
 	}
 
-slash::
+*/::
 	if(GetKeyState(numLeader))
 	{
 		slash_numLeader()
@@ -1664,7 +1678,7 @@ RShift Up::
 	shiftModifier := false
 	return
 
-Up::
+*Up::
 	if(GetKeyState(numLeader))
 	{
 		Up_numLeader()
