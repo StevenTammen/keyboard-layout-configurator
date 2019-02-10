@@ -1,7 +1,7 @@
 import json
 from mako.template import Template
-
-
+from PyQt5 import QtWidgets
+import sys
 def create_mapping(keymap):
 	"""
 		Creates a remapping script based on the JSON layouts parsed into a keymap object
@@ -444,10 +444,13 @@ def sanitize_json(json_data):
 
 
 def main():
-	keymap = create_keymap(open("layout-json/physical.json"), open("layout-json/num.json"),
-					open("layout-json/shift.json"), open("layout-json/base.json"))
-	create_mapping(keymap)
+	app = QtWidgets.QApplication(sys.argv)
+	window = testgui()
+	sys.exit(app.exec_())
 
+def open_wrapper(physical, num, shift, base):
+	keymap = create_keymap(open("layout-json/physical.json"), open("layout-json/num.json"), open("layout-json/shift.json"), open("layout-json/base.json"))
+	create_mapping(keymap)
 
 # base = parse("layout-json/base.json")
 # shift = parse("layout-json/shift.json")
@@ -455,6 +458,46 @@ def main():
 
 # keymap = {"physical": physical, "base": base, "shift": shift, "num": num}
 
+class testgui(QtWidgets.QWidget):
+    def __init__(self):
+        super().__init__()
+        self.physical = QtWidgets.QLineEdit()
+        physical_label = QtWidgets.QLabel("Physical JSON ")
+        self.num = QtWidgets.QLineEdit()
+        num_label = QtWidgets.QLabel("Num JSON ")
+        self.shift = QtWidgets.QLineEdit()
+        shift_label = QtWidgets.QLabel("Shift JSON ")
+        self.base = QtWidgets.QLineEdit()
+        base_label = QtWidgets.QLabel("Base JSON")
+        self.b = QtWidgets.QPushButton("Generate!")
+        self.v_box = QtWidgets.QVBoxLayout()
+        self.v_box.addWidget(physical_label)
+        self.v_box.addWidget(self.physical)
+        self.v_box.addWidget(num_label)
+        self.v_box.addWidget(self.num)
+        self.v_box.addWidget(shift_label)
+        self.v_box.addWidget(self.shift)
+        self.v_box.addWidget(base_label)
+        self.v_box.addWidget(self.base)
+        self.v_box.addWidget(QtWidgets.QLabel(""))
+        self.v_box.addWidget(self.b)
+        self.resize(300, 300)
+        self.setLayout(self.v_box)
+        self.setWindowTitle("Keyboard-FU key parser")
+        self.b.clicked.connect(lambda: open_wrapper(self.physical.text(), self.num.text(), self.shift.text(), self.base.text()))
+        self.show()
+
+
+    def reg_metho(self):
+        print(self.physical.text())
+        print(self.num.text())
+        print(self.shift.text())
+        print(self.base.text())
+
+
+
 
 if __name__ == '__main__':
 	main()
+
+
